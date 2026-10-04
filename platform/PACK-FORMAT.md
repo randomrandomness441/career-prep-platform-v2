@@ -17,9 +17,12 @@ Every question is one of two kinds, set in `meta.json`:
 
 - **`"kind": "compiled"`** (the default — omit the field entirely and you get this).
   The candidate writes real code, a compiler and a test binary decide pass/fail. This
-  is what the original C++ concurrency questions use. Right now the engine only knows
-  how to compile C++ (`runner.py` shells out to `clang++`) — a pack in another compiled
-  language needs real changes to `runner.py`, which is out of scope for this doc.
+  is what the original C++ concurrency questions use. The engine knows how to compile
+  two languages today: C++ (`runner.py`, shells out to `clang++`, the default when
+  `meta.json` omits `lang`) and Java (`java_runner.py`, shells out to `javac`/`java`,
+  used by setting `"lang": "java"` — see the fivetran and java-performance packs for
+  working examples). A pack in any other compiled language needs real changes to add
+  a third runner, which is out of scope for this doc.
 - **`"kind": "judged"`.** The candidate writes a free-text answer — a design writeup,
   a written explanation, whatever the question calls for — and an LLM grades it against
   a short rubric you write. No compiler involved at all. This is the kind almost
