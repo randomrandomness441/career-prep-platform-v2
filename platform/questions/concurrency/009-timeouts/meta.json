@@ -1,0 +1,15 @@
+{
+  "title": "Waiting With a Deadline",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "condition_variable::wait_until",
+    "wait_for",
+    "steady_clock",
+    "absolute deadline",
+    "spurious wakeup",
+    "timed_mutex"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

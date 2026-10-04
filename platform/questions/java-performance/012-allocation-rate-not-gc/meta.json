@@ -1,0 +1,8 @@
+{
+  "title": "Blaming the Collector for the Firehose",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["allocation rate", "GC tuning vs application fix", "object churn"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

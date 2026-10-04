@@ -1,0 +1,13 @@
+{
+  "title": "Concurrency Fundamentals Q&A",
+  "difficulty": "Easy",
+  "category": "qa",
+  "concepts": ["mutex", "deadlock", "concurrent modification"],
+  "est_minutes": 15,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "What is a mutex? etc..",
+    "What are the possible deadlock scenarios?",
+    "When does a concurrent modification exception occur?"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Atomic Checkpoint Store (Mini WAL)",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["write-ahead log", "atomic rename", "crash recovery", "torn writes"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: atomic checkpoint store, a mini write-ahead-log -- cursor position + buffered records committed together, a simulated crash mid-write must not leave a torn/inconsistent checkpoint on recovery"
+  ]
+}

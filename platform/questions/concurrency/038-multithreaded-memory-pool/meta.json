@@ -1,0 +1,15 @@
+{
+  "title": "Multithreaded Memory Pool",
+  "difficulty": "Hard",
+  "chapter": 8,
+  "concepts": [
+    "memory pool",
+    "lock-free",
+    "Treiber stack",
+    "ABA problem",
+    "compare_exchange",
+    "intrusive free list"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

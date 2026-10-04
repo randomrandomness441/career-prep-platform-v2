@@ -1,0 +1,20 @@
+{
+  "title": "Testing Concurrent Code",
+  "difficulty": "Medium",
+  "chapter": 11,
+  "concepts": [
+    "ThreadSanitizer",
+    "stress testing",
+    "test methodology",
+    "spinlock",
+    "mutual exclusion"
+  ],
+  "est_minutes": 30,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "How to implement a mutex using spinlocks and a flag (TestAndSet)"
+  ],
+  "category": "concurrency"
+}

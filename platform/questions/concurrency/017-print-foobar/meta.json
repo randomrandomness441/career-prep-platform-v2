@@ -1,0 +1,16 @@
+{
+  "title": "Print FooBar Alternately",
+  "difficulty": "Easy",
+  "chapter": 4,
+  "concepts": [
+    "condition variables",
+    "predicate wait",
+    "spurious wakeup",
+    "turn flag",
+    "notify_one vs notify_all",
+    "binary semaphore"
+  ],
+  "est_minutes": 20,
+  "leetcode": 1115,
+  "category": "concurrency"
+}

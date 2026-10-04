@@ -1,0 +1,8 @@
+{
+  "title": "The Benchmark That Measures Nothing at 875x the Speed",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["dead code elimination", "benchmarking methodology", "JIT warm-up", "microbenchmark pitfalls"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

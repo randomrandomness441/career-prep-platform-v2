@@ -1,0 +1,14 @@
+{
+  "title": "Work-Stealing Thread Pool",
+  "difficulty": "Hard",
+  "chapter": 9,
+  "concepts": [
+    "work stealing",
+    "thread pool",
+    "per-thread deque",
+    "graceful shutdown",
+    "std::thread destructor"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

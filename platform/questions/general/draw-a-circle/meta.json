@@ -1,0 +1,9 @@
+{
+  "title": "Draw a Circle (Midpoint Algorithm)",
+  "difficulty": "Medium",
+  "category": "coding",
+  "concepts": ["midpoint circle algorithm", "integer-only rasterization", "8-way symmetry"],
+  "est_minutes": 25,
+  "companies": ["Pure Storage"],
+  "reported_as": ["Classic Pure Storage interview problem: draw a circle"]
+}

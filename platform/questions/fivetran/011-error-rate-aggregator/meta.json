@@ -1,0 +1,13 @@
+{
+  "title": "Log Parser and Sliding-Window Error-Rate Alert",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["log parsing", "sliding window", "alerting threshold"],
+  "est_minutes": 20,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: structured log line parser + sliding-window error-rate aggregator, e.g. \"error rate over the last 60 seconds exceeds 5%\" style alerting logic (flamegraph-round follow-on)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Transferring Thread Ownership",
+  "difficulty": "Medium",
+  "chapter": 2,
+  "concepts": [
+    "RAII",
+    "move semantics",
+    "join vs detach",
+    "std::terminate",
+    "jthread"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

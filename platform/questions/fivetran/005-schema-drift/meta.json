@@ -1,0 +1,13 @@
+{
+  "title": "Schema Inference with Type Drift",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["schema inference", "type widening", "schema drift", "lattice"],
+  "est_minutes": 20,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: schema inference and drift -- sample records infer types, then a later record's field type change mid-stream must be handled by widening the inferred type"
+  ]
+}

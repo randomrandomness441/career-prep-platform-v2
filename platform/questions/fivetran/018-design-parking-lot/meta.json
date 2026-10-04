@@ -1,0 +1,12 @@
+{
+  "title": "Design a 2 + 4 Wheeler Parking Lot System",
+  "difficulty": "Medium",
+  "category": "design",
+  "concepts": ["LLD", "DB schema", "role modeling", "concurrency on shared slots"],
+  "est_minutes": 30,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "design a 2+4 wheeler parking lot system for owner / person parking / security guard; identify services + DB schema; requirements layered on mid-round (SDE-2 Bangalore R3, 2022)"
+  ]
+}

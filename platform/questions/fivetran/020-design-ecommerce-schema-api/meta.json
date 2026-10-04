@@ -1,0 +1,12 @@
+{
+  "title": "Design an E-commerce DB Schema and API",
+  "difficulty": "Medium",
+  "category": "design",
+  "concepts": ["schema normalization", "API design", "cart concurrency", "order integrity"],
+  "est_minutes": 30,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Design a DB schema and API for a simple e-commerce application (Users, Products, Orders, Cart) (SE India, Mar 2024)"
+  ]
+}

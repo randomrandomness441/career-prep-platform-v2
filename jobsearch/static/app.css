@@ -1,0 +1,215 @@
+:root{
+  --bg:#fafafa; --panel:#ffffff; --panel-2:#f6f6f7;
+  --border:#e6e6e9; --border-strong:#d4d4d8;
+  --fg:#18181b; --fg-2:#52525b; --dim:#909096;
+  --accent:#6d4aff; --accent-ink:#ffffff; --accent-hover:#5c3ce0;
+  --ok:#15803d; --ok-bg:#eefcf3;
+  --warn:#b45309; --warn-bg:#fef7e8;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --radius:10px; --radius-sm:7px; --radius-pill:999px;
+  --shadow-md:0 8px 24px rgba(24,24,27,.14);
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+/* Type scale bumped up across the board -- base body text was 14px, most
+   secondary text (badges, meta lines, labels) was 11-12.5px, well under the
+   ~16px web baseline readability research converges on (readability keeps
+   improving with size up to ~18pt; line-height 1.2-1.5x font size is the
+   accuracy sweet spot). Colors untouched -- #18181b on #fafafa is already
+   dark-gray-on-off-white, not pure black-on-white, which is the easier-on-
+   the-eyes choice research backs for extended reading; this was a size
+   problem, not a contrast one. */
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+.dim{color:var(--dim)}
+button{font:500 14.5px/1 var(--sans);color:var(--fg);background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 15px;cursor:pointer}
+button:hover{border-color:var(--border-strong);background:var(--panel-2)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+button.small{padding:5px 10px;font-size:13.5px}
+input[type=text],input[type=number],textarea,select{
+  font:14.5px var(--sans);color:var(--fg);background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 11px}
+textarea{width:100%;font-family:var(--mono);font-size:14px;resize:vertical}
+label{display:block;font-size:14px;color:var(--fg-2);margin:10px 0 4px;font-weight:500}
+
+#topnav{display:flex;gap:2px;padding:10px 20px 0;border-bottom:1px solid var(--border);background:var(--panel)}
+#topnav a{font:600 14.5px var(--sans);color:var(--fg-2);text-decoration:none;padding:10px 16px;
+  border-bottom:2px solid transparent}
+#topnav a.active{color:var(--fg);border-bottom-color:var(--accent)}
+#topnav a:hover{color:var(--fg)}
+
+#app{max-width:980px;margin:0 auto;padding:0 24px 60px}
+
+#subnav{display:flex;align-items:center;gap:8px;padding:18px 0;flex-wrap:wrap}
+.subtab{background:none;border:none;color:var(--dim);font:600 14.5px var(--sans);padding:6px 4px;
+  border-bottom:2px solid transparent}
+.subtab.active{color:var(--fg);border-bottom-color:var(--accent)}
+#subnav-spacer{flex:1}
+
+#filters{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 0 16px;
+  border-bottom:1px solid var(--border);margin-bottom:14px}
+#filters label{display:flex;align-items:center;gap:6px;margin:0;font-size:14px;color:var(--fg-2)}
+#f-search{width:220px}
+#f-count{margin-left:auto;font-size:14px}
+
+.job-row{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid var(--border);
+  border-radius:var(--radius);margin-bottom:8px;cursor:pointer;background:var(--panel)}
+.job-row:hover{border-color:var(--border-strong)}
+.job-score{font:700 16.5px var(--mono);width:42px;text-align:center;border-radius:var(--radius-sm);
+  padding:5px 0;flex-shrink:0}
+.score-hi{background:var(--ok-bg);color:var(--ok)}
+.score-mid{background:var(--warn-bg);color:var(--warn)}
+.score-lo{background:var(--panel-2);color:var(--dim)}
+.job-main{flex:1;min-width:0}
+.job-title{font-weight:600;font-size:15px}
+.job-company{color:var(--fg-2);font-size:14px;margin-top:1px}
+.job-badges{display:flex;gap:6px;flex-shrink:0}
+.badge{font:600 12.5px var(--sans);padding:4px 9px;border-radius:var(--radius-pill);white-space:nowrap}
+.badge-new{background:var(--panel-2);color:var(--dim)}
+.badge-queued{background:var(--warn-bg);color:var(--warn)}
+.badge-generated{background:var(--ok-bg);color:var(--ok)}
+.badge-applied{background:#eef2ff;color:#4338ca}
+.badge-tier{background:var(--bad-bg);color:var(--bad);text-transform:capitalize}
+.badge-llm{background:#f2eeff;color:var(--accent)}
+.badge-estimate{background:var(--panel-2);color:var(--dim)}
+.badge-stale{background:var(--warn-bg);color:var(--warn)}
+
+#pagination:not([hidden]){display:flex;align-items:center;justify-content:center;gap:14px;padding:18px 0}
+
+#overlay{position:fixed;inset:0;background:rgba(24,24,27,.35);z-index:10}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(760px,94vw);background:var(--panel);
+  box-shadow:var(--shadow-md);z-index:11;overflow-y:auto;padding:28px 32px}
+#manual-modal.panel{position:fixed;top:8vh;left:50%;right:auto;bottom:auto;transform:translateX(-50%);
+  width:min(600px,92vw);max-height:84vh;border-radius:var(--radius)}
+.panel h2{margin:0 0 4px;font-size:19.5px}
+.panel .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.close-x{position:absolute;top:16px;right:16px;background:none;border:none;font-size:19.5px;color:var(--dim)}
+
+.jd-title{font:700 18.5px var(--sans)}
+.jd-company{color:var(--fg-2);margin:2px 0 14px}
+.score-block{display:flex;gap:16px;padding:14px;background:var(--panel-2);border-radius:var(--radius);margin:12px 0}
+.score-block .num{font:700 26px var(--mono)}
+.kw-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kw{font:500 13px var(--mono);padding:3px 8px;border-radius:5px}
+.kw-yes{background:var(--ok-bg);color:var(--ok)}
+.kw-no{background:var(--bad-bg);color:var(--bad)}
+.kw-weak{background:var(--warn-bg);color:var(--warn)}
+
+/* ── generated-materials card: was a dense run-on line of bare text links,
+   now a real card with meta badges up top and proper file chips below ── */
+.app-entry{margin-top:10px;padding:12px 14px;border:1px solid var(--border);
+  border-radius:var(--radius);background:var(--panel-2)}
+.app-entry-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;font-size:13px}
+.app-entry-applied{margin-top:10px;padding:10px 14px;border:1px solid var(--border);
+  border-radius:var(--radius);background:var(--panel-2);font-size:14px;color:var(--fg-2)}
+.doc-links{display:flex;gap:8px;flex-wrap:wrap}
+.doc-link{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:1px solid var(--border);
+  border-radius:var(--radius-sm);background:var(--panel);color:var(--fg);text-decoration:none;
+  font-size:13.5px;font-weight:500;transition:border-color .12s ease,color .12s ease}
+.doc-link:hover{border-color:var(--accent);color:var(--accent)}
+.doc-link .ext{font:600 10px var(--mono);color:var(--dim);background:var(--panel-2);
+  padding:1px 5px;border-radius:4px;letter-spacing:.02em}
+.doc-link:hover .ext{color:var(--accent)}
+.doc-link.alt{font-size:12.5px;color:var(--dim);padding:6px 11px;font-weight:400;border-style:dashed}
+.doc-link.alt:hover{color:var(--fg-2);border-color:var(--border-strong)}
+/* No fixed max-height/own scrollbar here on purpose -- it read as a tiny
+   cramped box. The outer .panel already scrolls as one unit, so the JD
+   just flows to its natural length within that. */
+.jd-body{white-space:pre-wrap;font-size:14.5px;line-height:1.6;color:var(--fg-2);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:10px}
+
+.app-row{border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:10px}
+.app-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.status-track{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.status-track button{padding:5px 11px;font-size:13px}
+.status-hist{margin-top:8px;font-size:13.5px;color:var(--fg-2)}
+.status-hist div{padding:2px 0}
+.referral-form{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.referral-form input{flex:1;min-width:140px}
+
+/* ── profile view: minimal landing (upload + two buttons only) ──────── */
+#pf-topbar{display:flex;gap:8px;justify-content:flex-end;margin-bottom:40px}
+#pf-upload-box{max-width:480px;margin:60px auto 0;text-align:center;
+  border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px}
+#pf-upload-box h2{margin:0 0 6px;font-size:17.5px}
+#pf-upload-box p{margin:0 0 16px}
+#pf-upload-status{display:block;margin-top:10px}
+#pf-proposal-wrap{max-width:640px;margin:28px auto 0}
+#manage-panel h3{margin:0 0 8px}
+.pf-field-row{display:flex;align-items:center;gap:10px;padding:6px 0}
+.pf-field-row label{width:140px;flex-shrink:0;margin:0;font-size:14px;color:var(--fg-2)}
+.pf-field-row input,.pf-field-row textarea{flex:1;font:14.5px var(--sans)}
+.pf-field-row button{flex-shrink:0}
+.pf-cat{margin-bottom:10px}
+.pf-cat-name{font:600 13.5px var(--sans);color:var(--fg-2);margin-bottom:4px}
+.pf-skill-chip{display:inline-block;background:var(--panel-2);border-radius:var(--radius-pill);
+  padding:4px 11px;font-size:13.5px;margin:2px 4px 2px 0}
+.pf-point-row{border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:8px}
+.pf-point-row.retired{opacity:.5}
+.pf-point-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+.pf-point-head .meta{font-size:13.5px;color:var(--fg-2)}
+.pf-point-row textarea{width:100%;font:14.5px var(--sans);min-height:44px}
+.pf-point-actions{display:flex;gap:8px;margin-top:6px}
+.rewrite-panel{border:1px solid var(--warn);background:var(--warn-bg);border-radius:var(--radius-sm);
+  padding:10px 12px;margin-top:8px}
+.rewrite-panel .rewrite-body{font-size:13.5px;line-height:1.5;white-space:pre-wrap}
+.rewrite-panel .rewrite-text{background:var(--panel);border-radius:5px;padding:8px 10px;margin:6px 0 0;
+  white-space:pre-wrap}
+.rewrite-panel .rewrite-actions{display:flex;gap:8px;margin-top:8px}
+.pf-proposal-row{border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:6px;
+  display:flex;gap:10px;align-items:flex-start}
+.pf-proposal-row textarea{flex:1;font:14px var(--sans);min-height:38px}
+#point-modal.panel{position:fixed;top:8vh;left:50%;right:auto;bottom:auto;transform:translateX(-50%);
+  width:min(560px,92vw);max-height:84vh;border-radius:var(--radius)}
+
+/* ── master document (read-only) ─────────────────────────────────── */
+#masterdoc-panel.panel{width:min(820px,95vw)}
+.md-header{margin-bottom:18px}
+.md-header h1{margin:0 0 4px;font-size:23.5px}
+.md-header .contact{color:var(--fg-2);font-size:14px}
+.md-summary{margin:14px 0;padding:12px 14px;background:var(--panel-2);border-radius:var(--radius-sm);font-size:15px}
+.md-role{margin:18px 0 10px}
+.md-role-head{display:flex;justify-content:space-between;font-weight:600;font-size:15px}
+.md-role-company{color:var(--fg-2);font-weight:500;font-size:14px;margin-bottom:6px}
+.md-bullet{padding:5px 0 5px 16px;position:relative;font-size:14.5px;line-height:1.55}
+.md-bullet:before{content:"\2022";position:absolute;left:0;color:var(--dim)}
+.md-bullet.flagged{background:var(--warn-bg);border-radius:5px;padding-left:16px;text-decoration:none}
+.md-flag-note{display:inline-block;margin-left:6px;font-size:12.5px;color:var(--warn);font-weight:600}
+.md-skills-cat{margin:4px 0;font-size:14.5px}
+.md-skills-cat b{color:var(--fg-2);font-weight:600}
+
+/* ── company rollup cards ─────────────────────────────────────────── */
+/* :not([hidden]) so this doesn't outrank the browser's own [hidden]{display:none} --
+   a bare ID selector with "display:grid" was overriding el.hidden=true. */
+#company-cards:not([hidden]){display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:4px}
+.company-card{border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;cursor:pointer;background:var(--panel)}
+.company-card:hover{border-color:var(--border-strong)}
+.company-card .cc-score{font:700 21.5px var(--mono);margin-bottom:4px}
+.company-card .cc-name{font:600 15.5px var(--sans)}
+.company-card .cc-meta{font-size:13.5px;color:var(--fg-2);margin-top:2px}
+#btn-back-companies{margin-bottom:6px}
+
+.link-btn{background:none;border:none;color:var(--accent);font-size:14px;padding:8px 0 0;cursor:pointer}
+.link-btn:hover{text-decoration:underline;background:none}
+#pf-paste-box{margin-top:12px;text-align:left}
+.dupe-badge{font:600 12.5px var(--sans);color:var(--warn);background:var(--warn-bg);
+  padding:3px 8px;border-radius:var(--radius-pill);white-space:nowrap;margin-bottom:4px;display:inline-block}
+
+#company-scope-chip{margin-bottom:12px;font-size:14px;color:var(--fg-2)}
+
+/* ── "More" menu: folds the rarely-used maintenance actions (Rescore all,
+   Clear AI scores) out of the main button row -- five buttons in a row read
+   as clutter, these two aren't everyday clicks. ─────────────────────────── */
+#more-actions{position:relative}
+#more-actions summary{list-style:none;cursor:pointer;font:500 14.5px var(--sans);color:var(--fg);
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 15px}
+#more-actions summary::-webkit-details-marker{display:none}
+#more-actions summary:hover{border-color:var(--border-strong);background:var(--panel-2)}
+#more-actions[open] summary{border-color:var(--border-strong)}
+.more-menu{position:absolute;top:calc(100% + 4px);right:0;background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);
+  padding:6px;display:flex;flex-direction:column;gap:4px;z-index:20;min-width:150px}
+.more-menu button{text-align:left;white-space:nowrap}

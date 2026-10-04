@@ -1,0 +1,8 @@
+{
+  "title": "\"The JIT Handles That\" -- Except When It Doesn't",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["escape analysis", "scalar replacement", "allocation flame graph", "TLAB sampling bias"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

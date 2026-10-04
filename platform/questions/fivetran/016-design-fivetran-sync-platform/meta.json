@@ -1,0 +1,14 @@
+{
+  "title": "Design a Little Fivetran",
+  "difficulty": "Hard",
+  "category": "design",
+  "concepts": ["connector architecture", "scheduling", "schema drift", "extensibility"],
+  "est_minutes": 35,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Design the Fivetran system that pulls data from different services (SE, Oct 2018, 6 helpful votes)",
+    "Trying to design a little Fivetran (SE, Kaluga Jul 2021)",
+    "how I'd see an architecture design of the simplified Fivetran (Senior SE, Kaluga Nov 2021)"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Machine-Gun Fire: Spotting N+1 in a Trace",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["N+1 queries", "lazy loading", "ORM", "trace pattern recognition"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

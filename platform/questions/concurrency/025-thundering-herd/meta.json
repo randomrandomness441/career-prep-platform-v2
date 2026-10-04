@@ -1,0 +1,15 @@
+{
+  "title": "The Thundering Herd Problem",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "condition variables",
+    "notify_one vs notify_all",
+    "thundering herd",
+    "predicate wait",
+    "spurious wakeup",
+    "resource pools"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

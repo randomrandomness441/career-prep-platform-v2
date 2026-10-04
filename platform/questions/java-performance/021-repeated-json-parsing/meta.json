@@ -1,0 +1,8 @@
+{
+  "title": "Rebuilding the Parser Every Time You Use It",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["ObjectMapper reuse", "JSON parsing cost", "reflection overhead", "streaming vs tree model"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

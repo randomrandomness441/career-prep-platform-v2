@@ -1,0 +1,14 @@
+{
+  "title": "FK-Dependency-Ordering Comparator",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["Comparator contract", "topological sort", "cycle detection"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Learn to write comparators in Java and C++ (prep advice from a late-Sept-2026 candidate report)",
+    "Design a Comparator that compares two files before process and after processed (Senior SDET design round, Jul 2025) -- this is the code version of the same idea, applied to table load order"
+  ]
+}

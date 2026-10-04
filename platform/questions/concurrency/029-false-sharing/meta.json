@@ -1,0 +1,15 @@
+{
+  "title": "False Sharing (Cache-Line Padding)",
+  "difficulty": "Medium",
+  "chapter": 8,
+  "concepts": [
+    "false sharing",
+    "cache lines",
+    "alignas",
+    "padding",
+    "MESI",
+    "contention"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Parallel Prefix Sum (Scan)",
+  "difficulty": "Medium",
+  "chapter": 8,
+  "concepts": [
+    "prefix sum",
+    "scan",
+    "data parallelism",
+    "reduction",
+    "memory bandwidth"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

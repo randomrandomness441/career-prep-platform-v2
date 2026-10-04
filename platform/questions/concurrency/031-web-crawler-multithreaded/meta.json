@@ -1,0 +1,15 @@
+{
+  "title": "Web Crawler Multithreaded",
+  "difficulty": "Medium",
+  "chapter": 9,
+  "concepts": [
+    "thread pool",
+    "condition variable",
+    "work queue",
+    "exception safety",
+    "termination detection"
+  ],
+  "est_minutes": 30,
+  "leetcode": 1242,
+  "category": "concurrency"
+}

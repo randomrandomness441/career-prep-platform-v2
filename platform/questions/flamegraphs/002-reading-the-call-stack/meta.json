@@ -1,0 +1,8 @@
+{
+  "title": "Reading the Call Stack: Depth, Root, and the Hot Frame",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["y-axis meaning", "stack depth", "on-CPU frame", "root frame"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

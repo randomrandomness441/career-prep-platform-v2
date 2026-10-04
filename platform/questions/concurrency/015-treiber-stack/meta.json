@@ -1,0 +1,19 @@
+{
+  "title": "Treiber Stack \u2014 Lock-Free push and pop",
+  "difficulty": "Hard",
+  "chapter": 7,
+  "concepts": [
+    "lock-free",
+    "compare_exchange_weak",
+    "compare_exchange_strong",
+    "ABA problem",
+    "use-after-free",
+    "memory reclamation",
+    "hazard pointers",
+    "memory_order_acquire",
+    "memory_order_release",
+    "LL/SC"
+  ],
+  "est_minutes": 60,
+  "category": "concurrency"
+}

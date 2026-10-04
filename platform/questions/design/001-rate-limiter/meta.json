@@ -1,0 +1,8 @@
+{
+  "title": "Design a Rate Limiter",
+  "difficulty": "Medium",
+  "category": "design",
+  "concepts": ["token bucket", "sliding window", "distributed state"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

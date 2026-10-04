@@ -1,0 +1,12 @@
+{
+  "title": "A Fast, Thread-Safe Unique ID Generator",
+  "difficulty": "Hard",
+  "chapter": 7,
+  "category": "concurrency",
+  "concepts": ["CAS retry loop", "packed atomic state", "Snowflake-style IDs", "clock injection for testability", "lock-free"],
+  "est_minutes": 40,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "System design round: implement efficiently a Unique Id generation function used by different services -- focus was the code, thread-safety and fast"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Exceptions Across Thread Boundaries",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "std::terminate",
+    "std::promise",
+    "set_exception",
+    "std::future",
+    "packaged_task",
+    "current_exception"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

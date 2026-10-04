@@ -1,0 +1,15 @@
+{
+  "title": "Thread-Safe Singleton Initialization",
+  "difficulty": "Medium",
+  "chapter": 3,
+  "concepts": [
+    "Meyers singleton",
+    "magic statics",
+    "lazy initialization",
+    "std::call_once",
+    "check-then-act race",
+    "happens-before"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

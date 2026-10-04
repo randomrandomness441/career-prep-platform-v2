@@ -1,0 +1,8 @@
+{
+  "title": "The Gap in Your Own Flame Graph",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["stop-the-world pause", "G1", "ZGC", "Shenandoah", "GC tuning tradeoffs"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

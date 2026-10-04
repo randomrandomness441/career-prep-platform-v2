@@ -1,0 +1,14 @@
+{
+  "title": "Complete the Missing Connector Logic",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["incremental sync", "driver interface", "high-watermark cursor"],
+  "est_minutes": 20,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "SQL connector pair-programming (90 min): existing codebase, implement the missing piece of connector logic for a SQL connector (Staff SE onsite, Toronto Feb 2024)",
+    "Next round they asked me to complete functions in existing code which is like connect to db with their classes and drivers... and implement connector logic (candidate report, late Sept 2026)"
+  ]
+}

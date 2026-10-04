@@ -1,0 +1,8 @@
+{
+  "title": "The Expensive Part of an Exception Isn't the Throw",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["exception cost", "fillInStackTrace", "control-flow exceptions"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

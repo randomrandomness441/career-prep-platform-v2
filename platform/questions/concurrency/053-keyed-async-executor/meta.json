@@ -1,0 +1,19 @@
+{
+  "title": "Keyed Async Executor for a Microservice",
+  "difficulty": "Hard",
+  "chapter": 9,
+  "concepts": [
+    "per-key ordering",
+    "thread pool",
+    "serial dispatch queue",
+    "microservice design"
+  ],
+  "est_minutes": 40,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Designing asynchronous processing of data in a microservice"
+  ],
+  "category": "concurrency"
+}

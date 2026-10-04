@@ -1,0 +1,9 @@
+{
+  "title": "Collatz Sequence Length",
+  "difficulty": "Easy",
+  "category": "coding",
+  "concepts": ["integer overflow", "simulation"],
+  "est_minutes": 15,
+  "companies": ["Pure Storage"],
+  "reported_as": ["DS and Algo round based on the Collatz Conjecture"]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Rate-Limited API Walker",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["token bucket", "exponential backoff", "jitter", "Retry-After"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: rate-limited API walker with token bucket + exponential backoff with jitter on a mock 429, honoring a Retry-After value when the mock client returns one"
+  ]
+}

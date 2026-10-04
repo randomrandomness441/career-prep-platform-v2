@@ -1,0 +1,16 @@
+{
+  "title": "A List You Can Walk While Someone Edits It",
+  "difficulty": "Hard",
+  "chapter": 6,
+  "concepts": [
+    "fine-grained locking",
+    "lock coupling",
+    "hand-over-hand",
+    "per-node mutex",
+    "dummy head node",
+    "lock ordering",
+    "use-after-free"
+  ],
+  "est_minutes": 45,
+  "category": "concurrency"
+}

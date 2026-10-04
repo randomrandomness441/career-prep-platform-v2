@@ -1,0 +1,20 @@
+{
+  "title": "K Closest Points to Origin",
+  "difficulty": "Medium",
+  "category": "leetcode",
+  "concepts": [
+    "heap",
+    "quickselect",
+    "sorting",
+    "squared distance comparison"
+  ],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": [
+    "Fivetran"
+  ],
+  "reported_as": [
+    "Tagged to Fivetran interviews by LeetCode's own company-tag aggregation (InterviewSolver list), not a first-person candidate report like the other Fivetran questions -- practice-pool signal, not a confirmed asked question."
+  ]
+}

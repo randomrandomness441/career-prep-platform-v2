@@ -1,0 +1,15 @@
+{
+  "title": "Fan-Out with shared_future",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "std::shared_future",
+    "std::future is single-use",
+    "fan-out / broadcast",
+    "share()",
+    "const-correct concurrent get()",
+    "std::packaged_task"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

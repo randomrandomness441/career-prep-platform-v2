@@ -1,0 +1,8 @@
+{
+  "title": "The Legacy Pause With No GC Log Entry",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["biased locking", "safepoint storm", "legacy JVM behavior", "global safepoint"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

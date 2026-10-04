@@ -1,0 +1,19 @@
+{
+  "title": "Trapping Rain Water",
+  "difficulty": "Hard",
+  "category": "leetcode",
+  "concepts": [
+    "two pointers",
+    "prefix max",
+    "suffix max"
+  ],
+  "est_minutes": 40,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": [
+    "Fivetran"
+  ],
+  "reported_as": [
+    "Tagged to Fivetran interviews by LeetCode's own company-tag aggregation (InterviewSolver list), not a first-person candidate report like the other Fivetran questions -- practice-pool signal, not a confirmed asked question."
+  ]
+}

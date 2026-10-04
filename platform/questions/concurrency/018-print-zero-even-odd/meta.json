@@ -1,0 +1,15 @@
+{
+  "title": "Print Zero Even Odd",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "semaphores",
+    "ownerless signalling",
+    "mutex ownership",
+    "three-way handoff",
+    "routing a wakeup"
+  ],
+  "est_minutes": 25,
+  "leetcode": 1116,
+  "category": "concurrency"
+}

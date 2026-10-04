@@ -1,0 +1,8 @@
+{
+  "title": "The Wrapper Layer That's Free, Until It Isn't",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["deep call stacks", "over-abstraction", "inlining depth", "MaxInlineLevel", "StackOverflowError"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

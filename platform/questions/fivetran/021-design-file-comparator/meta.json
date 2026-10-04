@@ -1,0 +1,12 @@
+{
+  "title": "Design a Before/After File Comparator",
+  "difficulty": "Medium",
+  "category": "design",
+  "concepts": ["diffing strategy", "bounded memory", "hashing", "false-positive handling"],
+  "est_minutes": 25,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Design a Comparator that compares two files before process and after processed (Senior SDET design round, Jul 2025)"
+  ]
+}

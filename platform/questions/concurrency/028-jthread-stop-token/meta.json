@@ -1,0 +1,15 @@
+{
+  "title": "Cooperative Cancellation: jthread and stop_token",
+  "difficulty": "Medium",
+  "chapter": 9,
+  "concepts": [
+    "std::jthread",
+    "std::stop_token",
+    "request_stop",
+    "condition_variable_any",
+    "cooperative cancellation",
+    "RAII join"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

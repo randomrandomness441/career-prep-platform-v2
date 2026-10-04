@@ -1,0 +1,15 @@
+{
+  "title": "Latches, Barriers and a Phased Simulation",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "std::latch",
+    "std::barrier",
+    "completion function",
+    "phase synchronisation",
+    "bulk-synchronous parallel",
+    "condition_variable pitfalls"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

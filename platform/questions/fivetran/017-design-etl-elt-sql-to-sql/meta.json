@@ -1,0 +1,13 @@
+{
+  "title": "Design an ETL/ELT Pipeline Between Two SQL Databases",
+  "difficulty": "Medium",
+  "category": "design",
+  "concepts": ["ETL vs ELT", "incremental extraction", "transformation staging", "consistency"],
+  "est_minutes": 30,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "design an ETL system that transfers data from a SQL DB to another DB system (Staff SE, Apr 2020)",
+    "Design an ELT product (Senior SE design round, Aug 2026, HiredVoices)"
+  ]
+}

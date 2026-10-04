@@ -1,0 +1,8 @@
+{
+  "title": "OutOfMemoryError Is Not One Error",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["OutOfMemoryError taxonomy", "weak references", "soft references", "reference queues"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

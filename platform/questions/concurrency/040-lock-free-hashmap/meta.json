@@ -1,0 +1,14 @@
+{
+  "title": "Lock-Free Hash Map (Insert-Only)",
+  "difficulty": "Hard",
+  "chapter": 7,
+  "concepts": [
+    "lock-free",
+    "compare_exchange",
+    "CAS retry loop",
+    "memory reclamation",
+    "check-then-act"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Concurrency Prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/codemirror.css">
+<link rel="stylesheet" href="vendor/xterm.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<nav id="topnav">
+  <a href="/jobs/">Jobs</a>
+  <a href="/prepare/" class="active">Prepare</a>
+</nav>
+
+<div id="app">
+
+  <!-- ── browse ─────────────────────────────────────────────────── -->
+  <div id="view-list">
+    <div class="list-wrap">
+      <header>
+        <h1>Concurrency Prep</h1>
+        <div id="progress-line"></div>
+        <div id="progress-bar"><span></span></div>
+      </header>
+      <div id="pack-rollup" hidden></div>
+      <!-- Clicking a pack card scopes the list to that one topic, like
+           clicking a topic in LeetCode's problem list -- a single, clearly-
+           labeled "Showing: X" state with its own clear button, not a chip
+           silently added to the general multi-select tag row below (which
+           read as an unexplained side effect of clicking what looks like a
+           progress card, not a filter control). Same pattern jobs/ already
+           uses for its company-card drill-down. -->
+      <div id="pack-scope-chip" hidden>
+        Showing: <b id="pack-scope-name"></b>
+        <button id="btn-clear-pack" class="small">&times; clear</button>
+      </div>
+      <div id="list-controls">
+        <button id="history-link">Interview history</button>
+      </div>
+      <!-- Dynamic tag filter: companies (Fivetran, Pure Storage, ...) and
+           concepts (comparator, semaphore, connection pooling, ...) both
+           live in the same tag space. Type to search, click a suggestion
+           to add it as a chip; multiple chips narrow together (AND), not
+           one-at-a-time like a dropdown forces. -->
+      <div id="tag-filter">
+        <div id="tag-chips"></div>
+        <input id="tag-input" type="text" placeholder="filter by tag: company or concept…" autocomplete="off">
+        <div id="tag-suggestions" hidden></div>
+        <span id="tag-match-count" class="dim"></span>
+      </div>
+      <ul id="qlist"></ul>
+    </div>
+  </div>
+
+  <!-- ── interview history ─────────────────────────────────────── -->
+  <div id="view-history" hidden>
+    <div class="list-wrap">
+      <header>
+        <button id="history-back">&larr; All questions</button>
+        <h1>Interview History</h1>
+      </header>
+      <div id="history-list"></div>
+    </div>
+  </div>
+
+  <!-- ── solve ──────────────────────────────────────────────────── -->
+  <div id="view-solve" hidden>
+    <div id="topbar">
+      <button id="back-to-list">&larr; All questions</button>
+      <div id="qtitle"></div>
+      <button id="star-btn" title="Star this question">&#9734;</button>
+      <input id="star-note" type="text" placeholder="Why are you starring this?" hidden>
+      <div id="partnav">
+        <button id="prev-part">&larr; Prev</button>
+        <span id="partlabel"></span>
+        <button id="next-part">Next &rarr;</button>
+      </div>
+      <div id="verdict-chip"></div>
+    </div>
+
+    <div id="split">
+      <!-- left: prose -->
+      <section id="left">
+        <nav class="tabs" id="ltabs">
+          <button data-t="problem" class="on">Question</button>
+          <button data-t="usage">Usage</button>
+          <button data-t="answer">Answer</button>
+        </nav>
+        <div class="tabbody" id="tab-problem"></div>
+        <div class="tabbody" id="tab-usage" hidden></div>
+        <div class="tabbody" id="tab-answer" hidden>
+          <div id="reading-content"></div>
+          <div id="hints-content"></div>
+          <div id="ask-teacher">
+            <button id="ask-toggle">Ask a question about this</button>
+            <div id="ask-panel" hidden>
+              <div id="ask-thread"></div>
+              <div id="ask-composer">
+                <textarea id="ask-input" placeholder="What's not clicking?"></textarea>
+                <button id="ask-send" class="primary">Ask</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="gutter"></div>
+
+      <!-- right: code -->
+      <section id="right">
+        <div id="editor-bar">
+          <span id="savestate">saved</span>
+          <button id="reset">Reset</button>
+          <button id="run">Run</button>
+          <button id="submit" class="primary">Submit</button>
+        </div>
+        <div id="editor-wrap"><textarea id="code"></textarea></div>
+        <nav class="tabs" id="rtabs">
+          <button data-t="output" class="on">Output</button>
+          <button data-t="terminal">Terminal</button>
+          <button data-t="interview">Interview</button>
+        </nav>
+        <div id="pane-output" class="pane"></div>
+        <div id="pane-terminal" class="pane" hidden></div>
+        <div id="pane-interview" class="pane" hidden>
+          <div id="interview-empty">
+            <p id="interview-empty-msg">You'll be interviewed by Voss, a senior engineer.
+               Practice explaining your solution and handling live follow-ups, timed.</p>
+            <button id="start-interview" class="primary">Start Mock Interview</button>
+            <button id="close-elsewhere-btn" hidden>Go to that interview</button>
+            <button id="end-elsewhere-btn" hidden>End that interview</button>
+          </div>
+          <div id="interview-live" hidden>
+            <div id="interview-bar">
+              <span id="interview-avatar">V</span>
+              <div id="interview-who">
+                <span id="interview-name">Voss</span>
+                <span id="interview-role">Senior Engineer</span>
+              </div>
+              <span id="interview-timer">--:--</span>
+              <button id="interview-end" disabled>End Interview</button>
+            </div>
+            <div id="interview-transcript"></div>
+            <div id="interview-review" hidden></div>
+            <div id="interview-composer">
+              <textarea id="interview-input" placeholder="Say something to the interviewer…" disabled></textarea>
+              <button id="interview-send" class="primary" disabled>Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="vendor/codemirror.js"></script>
+<script src="vendor/clike.js"></script>
+<script src="vendor/matchbrackets.js"></script>
+<script src="vendor/closebrackets.js"></script>
+<script src="vendor/xterm.js"></script>
+<script src="vendor/xterm-addon-fit.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

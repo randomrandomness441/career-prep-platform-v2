@@ -1,0 +1,15 @@
+{
+  "title": "A Thread-Safe Event Gate",
+  "difficulty": "Hard",
+  "chapter": 3,
+  "category": "concurrency",
+  "concepts": ["interface race conditions", "TOCTOU", "draining a queue under a lock", "reentrancy deadlock", "callback dispatch"],
+  "est_minutes": 40,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Multiple users call reg_cb(f) at different times while an event is in progress; all reg_cb calls made during the event must wait until it completes, then run immediately -- once the event has completed, later reg_cb calls run immediately",
+    "Write an event driven system interface to schedule tasks",
+    "Design a thread-safe event dispatcher",
+    "Fix Thread-Safe Trigger Synchronization"
+  ]
+}

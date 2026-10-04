@@ -1,0 +1,8 @@
+{
+  "title": "The Leak Your Heap Dump Can't See",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["off-heap memory", "DirectByteBuffer", "JNI native memory", "Native Memory Tracking"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

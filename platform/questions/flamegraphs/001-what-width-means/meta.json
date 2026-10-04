@@ -1,0 +1,8 @@
+{
+  "title": "What a Flame Graph Actually Encodes",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["stack sampling", "x-axis meaning", "width vs time", "alphabetical sort"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

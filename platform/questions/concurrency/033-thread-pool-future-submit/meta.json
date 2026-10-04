@@ -1,0 +1,17 @@
+{
+  "title": "A Thread Pool with future-Returning submit()",
+  "difficulty": "Hard",
+  "chapter": 9,
+  "concepts": [
+    "thread pool",
+    "fixed worker threads",
+    "task queue",
+    "type-erased std::function<void()>",
+    "std::packaged_task",
+    "std::invoke_result_t",
+    "graceful shutdown",
+    "condition variables"
+  ],
+  "est_minutes": 50,
+  "category": "concurrency"
+}

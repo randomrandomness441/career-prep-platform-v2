@@ -1,0 +1,15 @@
+{
+  "title": "Building H2O",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "condition_variable",
+    "predicate waiting",
+    "group synchronisation",
+    "counting_semaphore",
+    "std::barrier",
+    "notify_all"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

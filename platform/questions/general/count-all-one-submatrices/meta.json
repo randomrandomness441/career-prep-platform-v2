@@ -1,0 +1,9 @@
+{
+  "title": "Count Submatrices With All Ones",
+  "difficulty": "Medium",
+  "category": "coding",
+  "concepts": ["dynamic programming", "histogram per row"],
+  "est_minutes": 25,
+  "companies": ["Pure Storage"],
+  "reported_as": ["Count All-One Square Submatrices"]
+}

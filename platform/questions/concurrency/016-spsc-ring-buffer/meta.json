@@ -1,0 +1,17 @@
+{
+  "title": "Lock-Free SPSC Ring Buffer",
+  "difficulty": "Hard",
+  "chapter": 7,
+  "concepts": [
+    "SPSC queue",
+    "memory_order_acquire",
+    "memory_order_release",
+    "relaxed ordering",
+    "wait-freedom",
+    "false sharing",
+    "alignas",
+    "power-of-two capacity"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

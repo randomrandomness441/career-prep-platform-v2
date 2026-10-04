@@ -1,0 +1,19 @@
+{
+  "title": "Stream Counter",
+  "difficulty": "Easy",
+  "chapter": 5,
+  "concepts": [
+    "sharded counter",
+    "false sharing",
+    "atomics",
+    "data race"
+  ],
+  "est_minutes": 20,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Keep track of the count based on the input stream"
+  ],
+  "category": "concurrency"
+}

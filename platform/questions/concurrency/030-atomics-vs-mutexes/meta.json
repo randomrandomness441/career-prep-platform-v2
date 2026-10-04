@@ -1,0 +1,20 @@
+{
+  "title": "Atomic Operations vs Mutexes",
+  "difficulty": "Easy",
+  "chapter": 5,
+  "concepts": [
+    "std::atomic",
+    "std::mutex",
+    "memory_order_relaxed",
+    "contention",
+    "cache-line bouncing"
+  ],
+  "est_minutes": 20,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Race-condition reasoning: min/max possible value of a counter incremented by 5 threads x 5 times each, no synchronization"
+  ],
+  "category": "concurrency"
+}

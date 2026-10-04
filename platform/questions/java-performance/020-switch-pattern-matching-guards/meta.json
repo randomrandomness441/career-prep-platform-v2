@@ -1,0 +1,8 @@
+{
+  "title": "Pattern Matching for switch: The Real Feature Behind the Name",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["pattern matching for switch", "guarded patterns", "JEP 441", "sealed types", "invokedynamic typeSwitch"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

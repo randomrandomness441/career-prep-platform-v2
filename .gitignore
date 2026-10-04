@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+*.db
+*.sqlite3
+.DS_Store
+applications/
+
+# One-time personal seed script -- has a real name/phone/email hardcoded in
+# it (it seeded ONE person's point bank from their own old resume PDFs).
+# Not reusable platform code; anyone else uses the "Upload a resume" /
+# "Add point manually" UI instead, which is fully generic.
+jobsearch/seed_point_bank.py

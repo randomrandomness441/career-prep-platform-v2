@@ -1,0 +1,15 @@
+{
+  "title": "Deadlock Detection & Watchdogs",
+  "difficulty": "Medium",
+  "chapter": 10,
+  "concepts": [
+    "deadlock",
+    "watchdog",
+    "std::future",
+    "wait_for",
+    "deadline",
+    "thread detach"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

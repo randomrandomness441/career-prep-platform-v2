@@ -1,0 +1,16 @@
+{
+  "title": "The Dining Philosophers",
+  "difficulty": "Medium",
+  "chapter": 3,
+  "concepts": [
+    "deadlock",
+    "Coffman conditions",
+    "circular wait",
+    "lock ordering",
+    "std::scoped_lock",
+    "counting_semaphore",
+    "starvation"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

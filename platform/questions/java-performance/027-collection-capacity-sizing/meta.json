@@ -1,0 +1,8 @@
+{
+  "title": "Presizing Collections: A Real but Modest Win",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["ArrayList resizing", "HashMap load factor", "collection capacity"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

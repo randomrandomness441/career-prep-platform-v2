@@ -1,0 +1,8 @@
+{
+  "title": "719x From Sharing One Random Number Generator",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["ThreadLocalRandom", "CAS contention", "shared mutable state"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

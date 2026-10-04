@@ -1,0 +1,13 @@
+{
+  "title": "Paginated Sync Loop with Crash-Safe Checkpointing",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["pagination", "checkpointing", "crash recovery", "at-least-once vs exactly-once"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: paginated sync loop over a fetchPage(cursor) client, checkpoint every N records, crash-safe resume without duplicating or skipping records"
+  ]
+}

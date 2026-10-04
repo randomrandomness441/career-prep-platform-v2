@@ -1,0 +1,8 @@
+{
+  "title": "The Boundary Where Boxing Stops Being Free",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["Integer cache", "autoboxing", "identity vs equality", "allocation from boxing"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Read-Write Locks (std::shared_mutex)",
+  "difficulty": "Medium",
+  "chapter": 5,
+  "concepts": [
+    "std::shared_mutex",
+    "shared_lock",
+    "unique_lock",
+    "reader-writer lock",
+    "writer starvation"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

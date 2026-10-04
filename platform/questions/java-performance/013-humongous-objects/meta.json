@@ -1,0 +1,8 @@
+{
+  "title": "The Object Too Big for Its Own Generation",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["G1 humongous objects", "region size", "heap fragmentation"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

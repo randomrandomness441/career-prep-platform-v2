@@ -1,0 +1,16 @@
+{
+  "title": "Sequential Consistency vs Relaxed: The Store-Buffer Litmus Test",
+  "difficulty": "Hard",
+  "chapter": 5,
+  "concepts": [
+    "memory_order",
+    "sequential consistency",
+    "relaxed atomics",
+    "store buffering",
+    "release-acquire",
+    "memory model",
+    "litmus test"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

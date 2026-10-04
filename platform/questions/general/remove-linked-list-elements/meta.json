@@ -1,0 +1,9 @@
+{
+  "title": "Remove All Linked List Elements Equal to a Value",
+  "difficulty": "Easy",
+  "category": "coding",
+  "concepts": ["linked list", "dummy head node"],
+  "est_minutes": 15,
+  "companies": ["Pure Storage"],
+  "reported_as": ["Remove all elements from a linked list that have the same value as the given value"]
+}

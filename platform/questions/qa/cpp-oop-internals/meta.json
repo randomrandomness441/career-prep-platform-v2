@@ -1,0 +1,13 @@
+{
+  "title": "C++ OOP Internals Q&A",
+  "difficulty": "Medium",
+  "category": "qa",
+  "concepts": ["vtable", "virtual dispatch", "multiple inheritance memory layout"],
+  "est_minutes": 15,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "How virtual functions work",
+    "What is the memory layout for a given class (base class, virtual table pointers)",
+    "Given two base classes and a class derived from them, how might one layout class instance memory so that polymorphism will work correctly"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "The Blind Spot: When the Kitchen Looks Idle but Isn't",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["off-CPU analysis", "lock contention", "I/O wait", "on-CPU blind spot"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

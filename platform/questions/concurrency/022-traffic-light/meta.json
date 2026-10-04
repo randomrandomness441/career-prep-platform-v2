@@ -1,0 +1,14 @@
+{
+  "title": "Traffic Light Controlled Intersection",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "condition_variable",
+    "wait predicate",
+    "state machine",
+    "batch handover",
+    "starvation freedom"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

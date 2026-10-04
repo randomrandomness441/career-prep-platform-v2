@@ -1,0 +1,14 @@
+{
+  "title": "Parallel Graph BFS",
+  "difficulty": "Hard",
+  "chapter": 8,
+  "concepts": [
+    "level-synchronous BFS",
+    "compare_exchange",
+    "data parallelism",
+    "ThreadSanitizer",
+    "check-then-act race"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

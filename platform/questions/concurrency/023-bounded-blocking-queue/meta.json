@@ -1,0 +1,18 @@
+{
+  "title": "A Bounded Blocking Queue",
+  "difficulty": "Medium",
+  "chapter": 6,
+  "concepts": [
+    "condition variables",
+    "lost wakeup",
+    "notify_one vs notify_all",
+    "producer-consumer",
+    "bounded buffer",
+    "clean shutdown",
+    "std::optional",
+    "predicate waits"
+  ],
+  "est_minutes": 40,
+  "leetcode": 1188,
+  "category": "concurrency"
+}

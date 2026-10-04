@@ -1,0 +1,14 @@
+{
+  "title": "Robot Grid: Fine-Grained Cell Locking",
+  "difficulty": "Medium",
+  "chapter": 10,
+  "concepts": [
+    "fine-grained locking",
+    "std::lock",
+    "deadlock avoidance",
+    "hold-and-wait",
+    "lock granularity"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

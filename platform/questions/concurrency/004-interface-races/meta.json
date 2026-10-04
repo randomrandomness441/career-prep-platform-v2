@@ -1,0 +1,21 @@
+{
+  "title": "Race Conditions Inherent in Interfaces",
+  "difficulty": "Medium",
+  "chapter": 3,
+  "concepts": [
+    "interface race conditions",
+    "thread-safe stack",
+    "atomic operations",
+    "exception safety",
+    "std::optional",
+    "shared_ptr"
+  ],
+  "est_minutes": 35,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Multithreaded stack implementation -- find the bugs, complete the pop operation"
+  ],
+  "category": "concurrency"
+}

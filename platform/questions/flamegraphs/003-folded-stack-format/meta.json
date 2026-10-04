@@ -1,0 +1,8 @@
+{
+  "title": "Where the Data Actually Comes From",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["folded stack format", "perf script", "stackcollapse", "flame graph generation pipeline"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

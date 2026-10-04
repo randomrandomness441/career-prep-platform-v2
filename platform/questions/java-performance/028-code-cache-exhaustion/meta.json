@@ -1,0 +1,8 @@
+{
+  "title": "When the Compiler Runs Out of Room and Gives Up",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["code cache", "ReservedCodeCacheSize", "compiler disabled", "generated code volume"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

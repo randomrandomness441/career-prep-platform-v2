@@ -1,0 +1,12 @@
+{
+  "title": "Determine Whether Four Points Form a Square",
+  "difficulty": "Medium",
+  "category": "coding",
+  "concepts": ["geometry", "distance", "hashing distinct values"],
+  "est_minutes": 20,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Design a function that takes 4 points (x,y coordinates) and returns true if the points form a square",
+    "Extended: given >= 4 points, count how many groups of 4 form a square (expected O(N^3))"
+  ]
+}

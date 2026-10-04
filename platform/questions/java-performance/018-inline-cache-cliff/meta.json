@@ -1,0 +1,8 @@
+{
+  "title": "The Second Type Is Free. The Third One Costs 3x.",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["inline cache", "monomorphic bimorphic megamorphic", "virtual dispatch cost", "JIT type guard"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

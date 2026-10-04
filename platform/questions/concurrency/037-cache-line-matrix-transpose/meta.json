@@ -1,0 +1,14 @@
+{
+  "title": "Cache-Line Aware Matrix Transpose",
+  "difficulty": "Hard",
+  "chapter": 8,
+  "concepts": [
+    "false sharing",
+    "cache lines",
+    "memory alignment",
+    "row padding",
+    "data parallelism"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

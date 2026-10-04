@@ -1,0 +1,14 @@
+{
+  "title": "One Fence Instead of Many: std::atomic_thread_fence",
+  "difficulty": "Hard",
+  "chapter": 5,
+  "concepts": [
+    "memory_order",
+    "atomic_thread_fence",
+    "sequential consistency",
+    "relaxed atomics",
+    "memory model"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

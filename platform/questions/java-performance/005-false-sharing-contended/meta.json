@@ -1,0 +1,8 @@
+{
+  "title": "Neighbors on the Same Cache Line",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["false sharing", "@Contended", "cache line padding", "LongAdder"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

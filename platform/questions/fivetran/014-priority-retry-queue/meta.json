@@ -1,0 +1,13 @@
+{
+  "title": "Prioritized Job Queue with Retries",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["priority queue", "exponential backoff", "dead-lettering", "thread safety"],
+  "est_minutes": 30,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Prioritized Job Queue with Retries (named explicitly by techprep.app's Fivetran LLD prompt pool)"
+  ]
+}

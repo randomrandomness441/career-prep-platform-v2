@@ -1,0 +1,8 @@
+{
+  "title": "Proving an Optimization Actually Worked",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["differential flame graph", "before/after comparison", "regression detection"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

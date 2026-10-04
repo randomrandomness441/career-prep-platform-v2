@@ -1,0 +1,8 @@
+{
+  "title": "The Bottleneck That Isn't One Wide Box",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["wide plateau vs wide leaf", "death by a thousand cuts", "aggregation across call paths"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "FizzBuzz Multithreaded",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "condition variables",
+    "notify_one vs notify_all",
+    "lost wakeup",
+    "predicate wait",
+    "thundering herd",
+    "deadlock"
+  ],
+  "est_minutes": 30,
+  "leetcode": 1195,
+  "category": "concurrency"
+}

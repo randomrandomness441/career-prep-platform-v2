@@ -1,0 +1,9 @@
+{
+  "title": "Optimize It, For Real This Time: The Java Version",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["hidden O(n^2)", "async-profiler", "JIT inlining", "real profiling on a real JVM"],
+  "est_minutes": 30,
+  "kind": "compiled",
+  "lang": "java"
+}

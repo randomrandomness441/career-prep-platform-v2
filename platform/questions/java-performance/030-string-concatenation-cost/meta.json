@@ -1,0 +1,8 @@
+{
+  "title": "Every += Builds and Throws Away a String",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["String immutability", "StringBuilder", "string concatenation cost"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

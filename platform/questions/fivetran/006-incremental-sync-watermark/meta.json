@@ -1,0 +1,13 @@
+{
+  "title": "Incremental Sync by High-Watermark",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["high-watermark cursor", "clock skew", "soft delete", "grace window"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: incremental sync by high-watermark (WHERE updated_at > cursor), handling clock skew (a record whose updated_at goes backwards) and a soft-delete flag"
+  ]
+}

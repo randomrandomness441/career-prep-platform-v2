@@ -1,0 +1,13 @@
+{
+  "title": "Thread-Safe JDBC-Style Connection Pool",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["connection pooling", "semaphore", "health check", "thread safety"],
+  "est_minutes": 30,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: connection pool with lease/release/health-check/evict against a mock JDBC-shaped driver, thread-safe under concurrent lease/release"
+  ]
+}

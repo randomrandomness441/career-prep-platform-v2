@@ -1,0 +1,8 @@
+{
+  "title": "Starvation Is Not Exhaustion",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["thread pool starvation", "thread pool exhaustion", "off-CPU diagnosis"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

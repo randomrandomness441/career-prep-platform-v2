@@ -1,0 +1,16 @@
+{
+  "title": "Backpressure: What to Do When the Consumer Is Slower",
+  "difficulty": "Medium",
+  "chapter": 6,
+  "concepts": [
+    "backpressure",
+    "bounded queue",
+    "two condition variables",
+    "drop policy",
+    "load shedding",
+    "graceful shutdown",
+    "observability"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

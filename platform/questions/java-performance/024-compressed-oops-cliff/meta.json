@@ -1,0 +1,8 @@
+{
+  "title": "The Heap Size Where Every Pointer Doubles",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["compressed oops", "heap sizing", "object reference size"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Parallel Directory Rename",
+  "difficulty": "Medium",
+  "chapter": 8,
+  "concepts": [
+    "recursive parallelism",
+    "return-value aggregation",
+    "data race",
+    "divide and conquer"
+  ],
+  "est_minutes": 25,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "How to rename all files in a directory and subdirectories?"
+  ],
+  "category": "concurrency"
+}

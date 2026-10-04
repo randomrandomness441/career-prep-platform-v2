@@ -1,0 +1,8 @@
+{
+  "title": "Optimize It: Find the Cost You Can't See by Reading",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["hidden O(n^2)", "profiling methodology", "algorithmic complexity", "using a real profiler"],
+  "est_minutes": 30,
+  "kind": "compiled"
+}

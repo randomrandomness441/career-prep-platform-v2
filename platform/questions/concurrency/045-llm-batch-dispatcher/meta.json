@@ -1,0 +1,20 @@
+{
+  "title": "Concurrent LLM Serving: Batching Dispatcher",
+  "difficulty": "Medium",
+  "chapter": 9,
+  "concepts": [
+    "request batching",
+    "std::promise",
+    "std::future",
+    "mutex",
+    "design"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency",
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Featured/selected practice question on interviewquery.com's Pure Storage guide: 'Concurrent LLM Serving'"
+  ]
+}

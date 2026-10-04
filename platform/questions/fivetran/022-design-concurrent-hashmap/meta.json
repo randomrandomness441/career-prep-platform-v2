@@ -1,0 +1,14 @@
+{
+  "title": "Design a Concurrent Hash Map",
+  "difficulty": "Hard",
+  "category": "design",
+  "concepts": ["lock striping", "resize safety", "memory visibility", "CAS"],
+  "est_minutes": 30,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Design a concurrent hash map (SE-II Toronto onsite, Oct 2024)",
+    "How would you implement your own hashmap? (SE Kaluga 2020)",
+    "Hashing functions and their application in HashMaps (2019)"
+  ]
+}

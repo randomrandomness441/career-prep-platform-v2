@@ -1,0 +1,9 @@
+{
+  "title": "Count Palindromic Substrings",
+  "difficulty": "Medium",
+  "category": "coding",
+  "concepts": ["expand around center", "palindromes", "two pointers"],
+  "est_minutes": 20,
+  "companies": ["Pure Storage"],
+  "reported_as": ["Find the number of palindromic substrings within a given string"]
+}

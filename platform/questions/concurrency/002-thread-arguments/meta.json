@@ -1,0 +1,15 @@
+{
+  "title": "Passing Arguments to Threads",
+  "difficulty": "Medium",
+  "chapter": 2,
+  "concepts": [
+    "decay-copy",
+    "std::ref",
+    "lambda capture",
+    "dangling references",
+    "move-only types",
+    "detach"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}

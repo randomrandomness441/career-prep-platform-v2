@@ -1,0 +1,14 @@
+{
+  "title": "Reconciler: Source vs Target by Composite Key",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["diffing by hash", "O(n+m) indexed join", "idempotent sync", "duplicate keys"],
+  "est_minutes": 30,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Design a Comparator that compares two files before processing and after processed (Senior SDET design round, Jul 2025)",
+    "Predicted production-round question: reconciler comparing source snapshot vs loaded snapshot -> insert/update/delete deltas by composite key, bounded memory"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Dining Philosophers with Asymmetric Resource Starvation",
+  "difficulty": "Hard",
+  "chapter": 3,
+  "concepts": [
+    "fairness",
+    "starvation",
+    "backoff",
+    "jitter",
+    "livelock",
+    "lock ordering"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

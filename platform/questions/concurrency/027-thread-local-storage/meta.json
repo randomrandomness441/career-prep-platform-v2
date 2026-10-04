@@ -1,0 +1,15 @@
+{
+  "title": "Thread-Local Storage",
+  "difficulty": "Easy",
+  "chapter": 3,
+  "concepts": [
+    "thread_local",
+    "thread storage duration",
+    "per-thread state",
+    "std::rand",
+    "TLS implementation",
+    "thread pools"
+  ],
+  "est_minutes": 20,
+  "category": "concurrency"
+}

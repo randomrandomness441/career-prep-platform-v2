@@ -1,0 +1,8 @@
+{
+  "title": "The Recompiled Pattern",
+  "difficulty": "Easy",
+  "category": "profiling",
+  "concepts": ["Pattern.compile cost", "String.matches", "hot loop allocation"],
+  "est_minutes": 15,
+  "kind": "judged"
+}

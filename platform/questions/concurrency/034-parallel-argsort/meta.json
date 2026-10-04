@@ -1,0 +1,15 @@
+{
+  "title": "Multithreaded Argsort (Few Distinct Values)",
+  "difficulty": "Hard",
+  "chapter": 8,
+  "concepts": [
+    "counting sort",
+    "data parallelism",
+    "reduction",
+    "prefix sum",
+    "false sharing",
+    "atomics"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

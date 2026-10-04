@@ -1,0 +1,8 @@
+{
+  "title": "The JVM That Thinks It Owns the Whole Machine",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["cgroup CPU throttling", "UseContainerSupport", "container-aware JVM", "GC thread sizing"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

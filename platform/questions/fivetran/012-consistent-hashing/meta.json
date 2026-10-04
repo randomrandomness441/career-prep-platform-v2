@@ -1,0 +1,13 @@
+{
+  "title": "Consistent Hashing for Connector-to-Worker Assignment",
+  "difficulty": "Hard",
+  "category": "connector",
+  "concepts": ["consistent hashing", "virtual nodes", "hash ring", "bounded reassignment"],
+  "est_minutes": 30,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: consistent hashing for connector-to-worker assignment, adding/removing a worker must only reassign a bounded, small fraction of keys (tested quantitatively)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Async Logger, Zero Allocation",
+  "difficulty": "Medium",
+  "chapter": 8,
+  "concepts": [
+    "multi-producer single-consumer",
+    "atomic fetch_add",
+    "zero allocation",
+    "release-acquire",
+    "fixed-size buffer"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

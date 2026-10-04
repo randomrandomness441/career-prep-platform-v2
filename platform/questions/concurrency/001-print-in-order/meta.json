@@ -1,0 +1,20 @@
+{
+  "title": "Print in Order",
+  "difficulty": "Easy",
+  "chapter": 4,
+  "concepts": [
+    "semaphores",
+    "condition variables",
+    "signalling",
+    "exception safety"
+  ],
+  "est_minutes": 20,
+  "leetcode": 1114,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "How does locking work with semaphores?"
+  ],
+  "category": "concurrency"
+}

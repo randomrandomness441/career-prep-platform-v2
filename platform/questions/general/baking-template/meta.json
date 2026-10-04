@@ -1,0 +1,11 @@
+{
+  "title": "Matching Box and Template Pairs",
+  "difficulty": "Easy",
+  "category": "coding",
+  "concepts": ["character frequency", "multiset vs set"],
+  "est_minutes": 15,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Given a list of box and template string pairs, find the number of common items (order doesn't matter): [['cm','mc'], ['ccm','mcc'], ['pc','mc'], ['pmc','mcp']] -> 3"
+  ]
+}

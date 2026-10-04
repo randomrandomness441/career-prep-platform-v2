@@ -1,0 +1,13 @@
+{
+  "title": "FK-Ordered Upsert Batch Writer",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["topological sort", "cycle detection", "batching", "foreign keys"],
+  "est_minutes": 25,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: upsert batch writer -- result set to chunked INSERT ... ON CONFLICT batches, rows ordered so a row referencing another row's foreign key is written after it (topological sort in disguise), reject a real dependency cycle"
+  ]
+}

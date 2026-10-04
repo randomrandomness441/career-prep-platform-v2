@@ -1,0 +1,19 @@
+{
+  "title": "Ticket Reservation: Optimistic vs Pessimistic",
+  "difficulty": "Medium",
+  "chapter": 5,
+  "concepts": [
+    "optimistic concurrency control",
+    "compare_exchange",
+    "check-then-act",
+    "pessimistic locking"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency",
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Featured/selected practice question on interviewquery.com's Pure Storage guide: 'Ticket Reservation Locking'"
+  ]
+}

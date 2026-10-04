@@ -1,0 +1,8 @@
+{
+  "title": "The Guard Clause That Confuses the CPU's Own Guess",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["branch prediction", "branch misprediction", "guard clause", "branchless architecture"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

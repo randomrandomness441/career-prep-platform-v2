@@ -1,0 +1,8 @@
+{
+  "title": "Capstone: The Thread That's Really 5,000 Threads Wearing a Trenchcoat",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["virtual threads", "carrier thread pinning", "Project Loom", "synchronized blocking"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

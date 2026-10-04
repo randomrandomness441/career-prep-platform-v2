@@ -1,0 +1,323 @@
+:root{
+  --bg:#fafafa; --panel:#ffffff; --panel-2:#f6f6f7;
+  --border:#e6e6e9; --border-strong:#d4d4d8;
+  --fg:#18181b; --fg-2:#52525b; --dim:#909096;
+  --accent:#6d4aff; --accent-ink:#ffffff; --accent-hover:#5c3ce0;
+  --ok:#15803d; --ok-bg:#eefcf3;
+  --warn:#b45309; --warn-bg:#fef7e8;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --help:#6d4aff; --help-bg:#f2eeff;
+  --radius:10px; --radius-sm:7px; --radius-pill:999px;
+  --shadow:0 1px 2px rgba(24,24,27,.05);
+  --shadow-md:0 8px 24px rgba(24,24,27,.10);
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  /* dark surfaces: output, terminal, mock-interview panes, code blocks in prose */
+  --dark-bg:#111113; --dark-panel:#1a1a1d; --dark-border:rgba(255,255,255,.08);
+  --dark-fg:#e4e4e7; --dark-dim:#8a8a92;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden}
+/* Same type-scale bump as jobs/'s app.css, for consistency between the two
+   pages: base body text was 14px, most secondary text (badges, meta lines,
+   tag chips) was 10.5-13px -- under the ~16px web baseline readability
+   research converges on. Colors/dark-surface tokens untouched. */
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+button{font:500 14.5px/1 var(--sans);color:var(--fg);background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 15px;cursor:pointer;
+  transition:border-color .12s ease,background .12s ease,color .12s ease}
+button:hover{border-color:var(--border-strong);background:var(--panel-2)}
+button:active{background:var(--border)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+button:disabled{opacity:.4;cursor:default}
+
+/* 42px = the fixed #topnav's own height (measured), so #app's content
+   starts right below it instead of sliding under it. */
+#app{height:calc(100vh - 42px);margin-top:42px}
+
+/* ── browse (question list, the landing page) ───────────────────────── */
+#view-list{height:100%;overflow-y:auto;background:var(--bg)}
+/* 720px read as narrow on a real monitor (huge empty margins either side)
+   -- widened to match the jobs board's own #app max-width (980px), same
+   reasoning: a list of rows/chips, not continuous prose, so there's no
+   line-length-readability reason to keep it narrow. */
+.list-wrap{max-width:900px;margin:0 auto;padding:56px 24px 80px}
+.list-wrap header{margin-bottom:20px}
+.list-wrap h1{margin:0 0 12px;font:600 21.5px var(--sans);letter-spacing:-.01em;color:var(--fg)}
+#progress-line{font-size:14px;color:var(--dim);font-weight:500}
+#progress-bar{height:4px;background:var(--panel-2);border-radius:var(--radius-pill);margin-top:9px;overflow:hidden}
+#progress-bar span{display:block;height:100%;width:0;
+  background:var(--fg);border-radius:var(--radius-pill);transition:width .3s ease}
+#pack-rollup{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pack-chip{flex:1 1 160px;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--panel);cursor:pointer;transition:border-color .1s ease}
+.pack-chip:hover{border-color:var(--border-strong)}
+.pack-chip.active{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.pack-name{display:block;font:500 13.5px var(--sans);color:var(--fg)}
+.pack-count{display:block;font:500 12.5px var(--mono);color:var(--dim);margin-top:2px}
+.pack-bar{height:3px;background:var(--panel-2);border-radius:var(--radius-pill);margin-top:6px;overflow:hidden}
+.pack-bar span{display:block;height:100%;background:var(--fg);border-radius:var(--radius-pill)}
+#pack-scope-chip{margin-top:12px;font-size:14px;color:var(--fg-2)}
+#list-controls{margin:20px 0 10px;display:flex;align-items:center;gap:10px}
+#filter-select{font:500 14.5px var(--sans);color:var(--fg);background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 13px;cursor:pointer}
+#filter-select:hover{border-color:var(--border-strong)}
+#history-link{font-size:14px;color:var(--fg-2);background:none;border-color:transparent}
+#history-link:hover{color:var(--fg);background:var(--panel-2);border-color:transparent}
+
+/* ── dynamic tag filter: type-to-search, multi-select chips, AND'd ──────── */
+#tag-filter{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:6px;
+  margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+#tag-chips{display:flex;flex-wrap:wrap;gap:6px}
+.tag-chip{display:inline-flex;align-items:center;gap:5px;font:500 13.5px var(--sans);
+  color:var(--accent);background:#f2eeff;border-radius:var(--radius-pill);padding:4px 7px 4px 11px}
+.tag-chip button{font:inherit;color:inherit;background:none;border:none;padding:0 2px;
+  cursor:pointer;line-height:1;font-size:15.5px}
+#tag-input{font:14.5px var(--sans);color:var(--fg);background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 11px;width:240px}
+#tag-input:focus{outline:none;border-color:var(--accent)}
+#tag-match-count{font-size:13.5px}
+#tag-suggestions{position:absolute;top:calc(100% + 2px);left:0;background:var(--panel);
+  border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);
+  z-index:30;min-width:220px;max-height:260px;overflow-y:auto}
+.tag-suggestion{font-size:14px;color:var(--fg);padding:8px 13px;cursor:pointer}
+.tag-suggestion:hover{background:var(--panel-2)}
+#qlist{list-style:none;margin:0;padding:0}
+#qlist li{padding:13px 15px;border-radius:var(--radius);cursor:pointer;display:flex;gap:12px;
+  align-items:flex-start;transition:background .1s ease}
+#qlist li:hover{background:var(--panel-2)}
+#qlist li.active{background:var(--panel-2);box-shadow:inset 2px 0 0 var(--accent)}
+#qlist li.qgroup{padding:20px 15px 6px;font:600 12.5px var(--sans);text-transform:uppercase;
+  letter-spacing:.05em;color:var(--dim);cursor:default}
+#qlist li.qgroup:first-child{padding-top:4px}
+#qlist li.qgroup:hover{background:none}
+.qnum{width:22px;flex:0 0 22px;text-align:right;font:500 13.5px var(--mono);color:var(--dim);margin-top:2px}
+.dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex:0 0 6px;background:var(--border-strong)}
+.dot.solved{background:var(--ok)} .dot.helped{background:var(--accent)}
+.dot.racy{background:var(--warn)} .dot.attempted{background:var(--bad)}
+.qmain{flex:1;min-width:0}
+.qtitle{font-size:15px;font-weight:500;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.company-badge{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;
+  color:var(--accent);background:none;border:1px solid var(--border);border-radius:5px;padding:2px 7px;margin-left:6px;
+  vertical-align:middle;white-space:nowrap}
+.category-badge{color:var(--fg-2)}
+.qmeta{font-size:12.5px;color:var(--dim);margin-top:3px}
+.star{color:var(--border-strong);margin-left:6px;font-size:13.5px;vertical-align:middle}
+.star.on{color:var(--warn)}
+
+/* ── interview history ───────────────────────────────────────────── */
+#view-history[hidden]{display:none}
+#view-history:not([hidden]){display:block;height:100%;overflow-y:auto}
+#history-list{margin-top:20px}
+.history-item{border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.history-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:12px}
+.history-title{font:600 16px var(--sans);color:var(--fg)}
+.history-date{font-size:13px;color:var(--dim);white-space:nowrap}
+.history-review{font-size:15px;line-height:1.65;color:var(--fg-2)}
+.history-review p{margin:0 0 10px}
+.history-review h1,.history-review h2,.history-review h3{font:600 15px var(--sans);color:var(--fg);margin:12px 0 6px}
+.history-review h1:first-child,.history-review h2:first-child{margin-top:0}
+.history-review strong{color:var(--fg)}
+
+/* ── solve (problem + editor, full width, no sidebar) ───────────────── */
+#view-solve[hidden]{display:none}
+#view-solve:not([hidden]){display:flex;flex-direction:column;height:100%;min-height:0}
+
+#topbar{display:flex;align-items:center;gap:14px;padding:12px 20px;
+  border-bottom:1px solid var(--border);background:var(--panel)}
+#back-to-list{background:none;border-color:transparent;color:var(--fg-2);padding:6px 9px;font-size:14px}
+#back-to-list:hover{color:var(--fg);background:var(--panel-2);border-color:transparent}
+#star-btn{font-size:17.5px;line-height:1;padding:6px 9px;color:var(--dim);flex:0 0 auto}
+#star-btn.on{color:var(--warn);border-color:rgba(180,83,9,.3)}
+#star-note{width:240px;font:500 14px var(--sans);color:var(--fg);background:var(--panel-2);
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 11px;flex:0 0 auto}
+#star-note:focus{outline:none;border-color:var(--accent)}
+#qtitle{font:600 16px var(--sans);flex:1;min-width:0;color:var(--fg)
+  ;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#partnav{display:flex;align-items:center;gap:8px}
+#partnav button{font-size:13.5px;padding:6px 11px}
+#partlabel{font-size:13.5px;color:var(--dim);min-width:100px;text-align:center;font-weight:500}
+#verdict-chip{font:600 12.5px var(--sans);padding:5px 12px;border-radius:var(--radius-pill);
+  background:var(--panel-2);color:var(--dim)}
+#verdict-chip.clean{background:var(--ok-bg);color:var(--ok)}
+#verdict-chip.racy{background:var(--warn-bg);color:var(--warn)}
+#verdict-chip.bad{background:var(--bad-bg);color:var(--bad)}
+#verdict-chip.helped{background:var(--help-bg);color:var(--help)}
+
+#split{flex:1;display:flex;min-height:0}
+#left{width:54%;display:flex;flex-direction:column;min-width:0;border-right:1px solid var(--border);background:var(--panel)}
+#gutter{width:4px;cursor:col-resize;background:var(--border);transition:background .15s}
+#gutter:hover{background:var(--accent)}
+#right{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--panel)}
+
+.tabs{display:flex;gap:2px;padding:8px 14px;border-bottom:1px solid var(--border)}
+.tabs button{background:none;border:1px solid transparent;font-size:14px;color:var(--dim);
+  padding:6px 13px;border-radius:var(--radius-sm);font-weight:500}
+.tabs button:hover{color:var(--fg);background:var(--panel-2)}
+.tabs button.on{background:var(--panel-2);color:var(--fg)}
+.tabbody{flex:1;overflow-y:auto;padding:26px 32px;min-height:0;font-size:16.5px;line-height:1.7;color:var(--fg-2)}
+
+/* prose */
+.tabbody h1,.tabbody h2,.tabbody h3{margin:26px 0 10px;font-family:var(--sans);font-weight:600;
+  color:var(--fg);letter-spacing:-.01em}
+.tabbody h1{font-size:21.5px} .tabbody h2{font-size:18.5px} .tabbody h3{font-size:17px}
+.tabbody h1:first-child,.tabbody h2:first-child{margin-top:0}
+.tabbody p{margin:0 0 14px}
+.tabbody ul,.tabbody ol{margin:0 0 14px;padding-left:22px}
+.tabbody li{margin-bottom:6px}
+.tabbody strong{color:var(--fg);font-weight:600}
+.tabbody code{font-family:var(--mono);font-size:14.5px;background:var(--panel-2);color:var(--accent);
+  padding:2px 6px;border-radius:5px}
+.tabbody pre{background:var(--dark-bg);border:1px solid var(--dark-border);border-radius:var(--radius);
+  padding:16px 18px;overflow-x:auto;margin:0 0 16px}
+.tabbody pre code{background:none;color:var(--dark-fg);padding:0;font-size:14.5px;line-height:1.6}
+.tabbody blockquote{margin:0 0 14px;padding:9px 15px;border-left:2px solid var(--border-strong);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;background:var(--panel-2);color:var(--fg-2)}
+.tabbody table{border-collapse:separate;border-spacing:0;width:100%;margin:0 0 16px;font-size:15px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+.tabbody th,.tabbody td{border-bottom:1px solid var(--border);padding:9px 12px;text-align:left}
+.tabbody tr:last-child td{border-bottom:none}
+.tabbody th{background:var(--panel-2);font-weight:600;color:var(--fg)}
+
+/* hints */
+.hint{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+.hint .head{padding:10px 14px;display:flex;justify-content:space-between;align-items:center;
+  background:var(--panel-2);font:600 14px var(--sans);color:var(--fg)}
+.hint .body{padding:13px 15px;border-top:1px solid var(--border);font-size:16px;line-height:1.7;color:var(--fg-2)}
+.hint button{font-size:13px;padding:5px 11px}
+.warnbox{background:var(--warn-bg);border:1px solid rgba(180,83,9,.2);color:#8a5f16;
+  padding:12px 15px;border-radius:var(--radius-sm);font-size:14.5px;margin-bottom:16px}
+
+/* ask a teacher (reading tab) */
+#ask-teacher{margin-top:28px;border-top:1px solid var(--border);padding-top:18px}
+#ask-toggle{font-size:14px}
+#ask-panel{margin-top:12px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+#ask-thread{max-height:280px;overflow-y:auto;padding:14px 16px}
+#ask-thread:empty{display:none}
+.ask-row{margin-bottom:14px}
+.ask-row:last-child{margin-bottom:0}
+.ask-label{font:600 12px var(--sans);color:var(--dim);margin-bottom:3px;text-transform:uppercase;letter-spacing:.03em}
+.ask-row.user .ask-label{color:var(--accent)}
+.ask-body{font-size:15px;line-height:1.65;color:var(--fg-2);white-space:pre-wrap}
+#ask-composer{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--border);background:var(--panel-2)}
+#ask-input{flex:1;resize:none;height:44px;background:var(--panel);color:var(--fg);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:9px 12px;font-family:var(--sans);font-size:15px}
+#ask-input:focus{outline:none;border-color:var(--accent)}
+#ask-composer button{font-size:14px}
+
+/* editor */
+#editor-bar{display:flex;align-items:center;gap:8px;padding:9px 14px;background:var(--panel);
+  border-bottom:1px solid var(--border)}
+#savestate{flex:1;font-size:13px;color:var(--dim);font-weight:500}
+#editor-wrap{flex:1;min-height:0;overflow:hidden}
+.CodeMirror{height:100%;font-family:var(--mono);font-size:15px;line-height:1.6}
+
+.pane{height:34%;min-height:150px;overflow:auto;background:var(--dark-bg);color:var(--dark-fg);
+  border-top:1px solid var(--border);font-family:var(--mono);font-size:14.5px}
+#pane-output{padding:14px 16px;white-space:pre-wrap}
+#pane-terminal{padding:8px 10px}
+
+/* stage rows */
+.stage{display:flex;gap:10px;align-items:baseline;padding:3px 0}
+.stage .nm{width:108px;color:var(--dark-dim)}
+.stage .st{font-weight:600}
+.st.ok{color:#4ade80} .st.fail{color:#f87171} .st.skip{color:var(--dark-dim)}
+.stage-detail{margin:6px 0 12px 118px;padding:10px 13px;background:var(--dark-panel);
+  border-left:2px solid #f87171;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  white-space:pre-wrap;color:var(--dark-fg)}
+.final{margin-top:16px;padding:12px 15px;border-radius:var(--radius-sm);font:600 14.5px var(--sans)}
+.final.CLEAN{background:rgba(74,222,128,.12);color:#4ade80}
+.final.CORRECT_BUT_RACY{background:rgba(251,191,36,.12);color:#fbbf24}
+.final.REJECTED{background:rgba(248,113,113,.12);color:#f87171}
+.final small{display:block;font:400 14px var(--sans);margin-top:6px;opacity:.85}
+.running{color:var(--dark-dim)}
+
+/* ── mock interview: gets real screen presence when it's live, not just
+   another tab in the console strip ─────────────────────────────────── */
+#pane-interview{overflow:hidden;padding:0}
+#pane-interview:not([hidden]){display:flex;flex-direction:column;height:60%}
+
+#interview-empty:not([hidden]){display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex:1;gap:14px;padding:30px;text-align:center}
+#interview-empty p{margin:0;max-width:280px;font-size:15px;line-height:1.6;color:var(--dark-dim)}
+
+#interview-live:not([hidden]){display:flex;flex-direction:column;flex:1;min-height:0}
+#interview-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;
+  background:var(--dark-panel);border-bottom:1px solid var(--dark-border);flex:0 0 auto}
+#interview-avatar{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font:600 14px var(--sans);flex:0 0 28px}
+#interview-who{display:flex;flex-direction:column;line-height:1.3}
+#interview-name{font:600 14px var(--sans);color:var(--dark-fg)}
+#interview-role{font-size:12px;color:var(--dark-dim)}
+#interview-timer{margin-left:auto;font:600 14.5px var(--mono);color:var(--dark-fg)}
+#interview-timer.over{color:#f87171}
+#interview-bar button{font-size:13px;padding:5px 12px}
+
+#interview-transcript{flex:1;overflow-y:auto;padding:16px 14px;font-family:var(--sans);font-size:15px}
+.imsg-row{max-width:78%;margin-bottom:14px}
+.imsg-row.candidate{margin-left:auto}
+.imsg-meta{font-size:12px;color:var(--dark-dim);margin:0 2px 4px}
+.imsg-row.candidate .imsg-meta{text-align:right}
+.imsg{padding:9px 13px;border-radius:var(--radius);white-space:pre-wrap;line-height:1.55}
+.imsg.interviewer{background:var(--dark-panel);color:var(--dark-fg);border:1px solid var(--dark-border)}
+.imsg.candidate{background:var(--accent);color:#fff}
+
+#interview-review{margin:0 14px 12px;padding:14px 16px;background:var(--dark-panel);
+  border:1px solid var(--dark-border);border-radius:var(--radius-sm);flex:0 0 auto;overflow-y:auto;max-height:45%}
+#interview-review h1,#interview-review h2,#interview-review h3{color:var(--dark-fg);
+  font-family:var(--sans);font-weight:600;margin:14px 0 6px}
+#interview-review h1:first-child,#interview-review h2:first-child{margin-top:0}
+#interview-review p,#interview-review li{color:var(--dark-fg)}
+#interview-review p.dim{color:var(--dark-dim)}
+#interview-review strong{color:#fff}
+#interview-composer{display:flex;gap:8px;padding:10px 12px;background:var(--dark-bg);
+  border-top:1px solid var(--dark-border);flex:0 0 auto}
+#interview-input{flex:1;resize:none;height:56px;background:var(--dark-panel);color:var(--dark-fg);
+  border:1px solid var(--dark-border);border-radius:var(--radius-sm);padding:10px 13px;
+  font-family:var(--sans);font-size:15px}
+#interview-input:focus{outline:none;border-color:var(--accent)}
+#interview-composer button{font-size:14px;align-self:flex-end}
+
+/* ── code editor theme: "cutelight" ─────────────────────────────────── */
+.cm-s-cutelight.CodeMirror{background:#ffffff;color:var(--fg)}
+.cm-s-cutelight .CodeMirror-gutters{background:var(--panel);border-right:1px solid var(--border)}
+.cm-s-cutelight .CodeMirror-linenumber{color:var(--dim)}
+.cm-s-cutelight .CodeMirror-cursor{border-left:2px solid var(--accent)}
+.cm-s-cutelight div.CodeMirror-selected{background:#ece9fc}
+.cm-s-cutelight .CodeMirror-matchingbracket{color:var(--accent)!important;font-weight:600;
+  background:#ece9fc;border-radius:3px}
+.cm-s-cutelight .cm-keyword{color:#7c5cff;font-weight:600}
+.cm-s-cutelight .cm-atom{color:#b45309}
+.cm-s-cutelight .cm-number{color:#b45309}
+.cm-s-cutelight .cm-def{color:#c0316c;font-weight:600}
+.cm-s-cutelight .cm-variable{color:var(--fg)}
+.cm-s-cutelight .cm-variable-2{color:#1c6fd6}
+.cm-s-cutelight .cm-variable-3{color:#15803d}
+.cm-s-cutelight .cm-property{color:#1c6fd6}
+.cm-s-cutelight .cm-operator{color:var(--fg-2)}
+.cm-s-cutelight .cm-comment{color:var(--dim);font-style:italic}
+.cm-s-cutelight .cm-string{color:#15803d}
+.cm-s-cutelight .cm-string-2{color:#15803d}
+.cm-s-cutelight .cm-meta{color:#c0316c}
+.cm-s-cutelight .cm-qualifier{color:#7c5cff}
+.cm-s-cutelight .cm-builtin{color:#c0316c}
+.cm-s-cutelight .cm-bracket{color:var(--fg-2)}
+.cm-s-cutelight .cm-tag{color:#7c5cff}
+.cm-s-cutelight .cm-attribute{color:#1c6fd6}
+.cm-s-cutelight .cm-header{color:#c0316c}
+.cm-s-cutelight .cm-link{color:#1c6fd6}
+.cm-s-cutelight .cm-error{color:var(--bad);background:var(--bad-bg)}
+
+/* ── shared topnav (jobs/ and prepare/ are two separate pages merged under
+   one server -- this matches jobs/'s own #topnav exactly, same corner, same
+   pill style, so switching between the two doesn't read as a layout jump.
+   Still fixed-position, not in document flow, so it doesn't disturb the
+   existing 100vh/overflow:hidden layout below it. ─────────────────────── */
+#topnav{position:fixed;top:0;left:0;z-index:50;display:flex;gap:2px;
+  padding:8px 8px 0;background:var(--panel);border-bottom-right-radius:var(--radius-sm);
+  box-shadow:var(--shadow)}
+#topnav a{font:600 14.5px var(--sans);color:var(--fg-2);text-decoration:none;padding:8px 14px;
+  border-bottom:2px solid transparent}
+#topnav a.active{color:var(--fg);border-bottom-color:var(--accent)}
+#topnav a:hover{color:var(--fg)}

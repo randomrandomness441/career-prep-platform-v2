@@ -1,0 +1,8 @@
+{
+  "title": "When the Camera Itself Is Lying to You",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["sampling frequency", "short-lived spikes", "debug symbols", "inlining", "unknown frames"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "A Constant-Time Set (Sparse Set)",
+  "difficulty": "Medium",
+  "category": "coding",
+  "concepts": ["sparse set", "O(1) clear", "swap-and-pop removal"],
+  "est_minutes": 25,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Implement a set over integers in [0, N) supporting Insert, Remove, Lookup, Clear and Iterate, all in O(1)"
+  ]
+}

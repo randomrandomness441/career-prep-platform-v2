@@ -1,0 +1,12 @@
+{
+  "title": "Design a Booking System (booking.com-style)",
+  "difficulty": "Hard",
+  "category": "design",
+  "concepts": ["state machine", "concurrency on last inventory unit", "extensibility"],
+  "est_minutes": 35,
+  "kind": "judged",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "designing an app similar to booking.com: entities User/Inventory/Booking/Payment, hold->confirm->cancel state machine, concurrency on the last slot, extensibility follow-up (adding seat selection) -- \"where the round is won or lost\" (Medium SE-II breakdown)"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "The Profiler That Can Only Look When the JVM Lets It",
+  "difficulty": "Medium",
+  "category": "profiling",
+  "concepts": ["safepoint bias", "JFR", "async-profiler", "AsyncGetCallTrace"],
+  "est_minutes": 20,
+  "kind": "judged"
+}

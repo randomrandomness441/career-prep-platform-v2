@@ -1,0 +1,15 @@
+{
+  "title": "Two Mutexes Without a Deadlock",
+  "difficulty": "Medium",
+  "chapter": 3,
+  "concepts": [
+    "deadlock",
+    "std::scoped_lock",
+    "std::lock",
+    "std::adopt_lock",
+    "lock ordering",
+    "unique_lock"
+  ],
+  "est_minutes": 35,
+  "category": "concurrency"
+}

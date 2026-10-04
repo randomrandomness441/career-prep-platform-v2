@@ -1,0 +1,16 @@
+{
+  "title": "Parallel Quicksort with std::async",
+  "difficulty": "Hard",
+  "chapter": 4,
+  "concepts": [
+    "std::async",
+    "std::future",
+    "launch policy",
+    "packaged_task",
+    "promise",
+    "exception propagation",
+    "divide and conquer"
+  ],
+  "est_minutes": 45,
+  "category": "concurrency"
+}

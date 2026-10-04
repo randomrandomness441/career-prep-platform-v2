@@ -1,0 +1,11 @@
+{
+  "title": "Design a Skiplist",
+  "difficulty": "Hard",
+  "category": "coding",
+  "concepts": ["skiplist", "probabilistic data structure", "linked list levels"],
+  "est_minutes": 35,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Implement a Skiplist data structure that supports efficient search, insertion, and deletion of elements -- a probabilistic data structure with multiple levels of linked lists"
+  ]
+}

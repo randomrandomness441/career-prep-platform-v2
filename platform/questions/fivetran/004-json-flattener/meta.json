@@ -1,0 +1,13 @@
+{
+  "title": "Nested JSON to Flat Rows",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["schema flattening", "array indexing", "type inference", "recursion"],
+  "est_minutes": 20,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: nested JSON -> flat path__to__field rows, including arrays, with per-field type inference on the way out"
+  ]
+}

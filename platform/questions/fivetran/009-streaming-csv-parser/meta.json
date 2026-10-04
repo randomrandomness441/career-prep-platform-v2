@@ -1,0 +1,13 @@
+{
+  "title": "Streaming CSV Parser with Malformed-Row Policy",
+  "difficulty": "Medium",
+  "category": "connector",
+  "concepts": ["streaming parsing", "bounded memory", "error policy"],
+  "est_minutes": 20,
+  "kind": "compiled",
+  "lang": "java",
+  "companies": ["Fivetran"],
+  "reported_as": [
+    "Predicted production-round question: streaming CSV/JSONL parser with bounded memory and a configurable malformed-row policy (skip-and-count vs fail-fast), test both modes"
+  ]
+}

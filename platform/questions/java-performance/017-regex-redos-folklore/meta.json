@@ -1,0 +1,8 @@
+{
+  "title": "The ReDoS Trap Has Two Doors, Not One",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["catastrophic backtracking", "ReDoS", "regex memoization", "verifying folklore"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

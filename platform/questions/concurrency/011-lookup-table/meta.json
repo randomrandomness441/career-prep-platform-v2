@@ -1,0 +1,16 @@
+{
+  "title": "A Thread-Safe Lookup Table",
+  "difficulty": "Medium",
+  "chapter": 6,
+  "concepts": [
+    "shared_mutex",
+    "shared_lock vs unique_lock",
+    "lock striping",
+    "bucketing",
+    "fixed bucket count",
+    "return by value under the lock",
+    "reader-writer locking"
+  ],
+  "est_minutes": 40,
+  "category": "concurrency"
+}

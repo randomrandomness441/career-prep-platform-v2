@@ -1,0 +1,8 @@
+{
+  "title": "Capstone: Picking the Right Tool for a Real Incident",
+  "difficulty": "Hard",
+  "category": "profiling",
+  "concepts": ["CPU vs off-CPU vs differential vs continuous profiling", "eBPF", "production diagnosis"],
+  "est_minutes": 25,
+  "kind": "judged"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "A Lock Hierarchy That Catches Deadlock",
+  "difficulty": "Medium",
+  "chapter": 3,
+  "concepts": [
+    "deadlock",
+    "lock ordering",
+    "thread_local",
+    "Lockable concept",
+    "runtime invariant checking",
+    "std::logic_error"
+  ],
+  "est_minutes": 30,
+  "category": "concurrency"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Why Can't All Decimals Be Represented Exactly in Binary Floating Point?",
+  "difficulty": "Easy",
+  "category": "qa",
+  "concepts": ["floating point representation", "binary fractions"],
+  "est_minutes": 10,
+  "companies": ["Pure Storage"],
+  "reported_as": [
+    "Which number can be represented as two decimal? / floating binary point representation of decimals -- why can't decimals be represented exactly in binary"
+  ]
+}

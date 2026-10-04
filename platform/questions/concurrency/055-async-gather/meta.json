@@ -1,0 +1,19 @@
+{
+  "title": "Async Gather: Composing Futures in Order",
+  "difficulty": "Medium",
+  "chapter": 4,
+  "concepts": [
+    "std::future",
+    "std::async",
+    "exception propagation",
+    "future combinators"
+  ],
+  "est_minutes": 25,
+  "companies": [
+    "Pure Storage"
+  ],
+  "reported_as": [
+    "Inferring information about the output of async tasks composed of atomic operations"
+  ],
+  "category": "concurrency"
+}

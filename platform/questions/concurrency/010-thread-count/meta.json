@@ -1,0 +1,14 @@
+{
+  "title": "How Many Threads?",
+  "difficulty": "Medium",
+  "chapter": 2,
+  "concepts": [
+    "hardware_concurrency",
+    "oversubscription",
+    "work partitioning",
+    "parallel_accumulate",
+    "thread launch cost"
+  ],
+  "est_minutes": 25,
+  "category": "concurrency"
+}
