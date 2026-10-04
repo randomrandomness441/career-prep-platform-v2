@@ -5,11 +5,13 @@ log.
 
 Implement three static methods on `Solution`:
 
-    static LogLine parseLine(String raw)
+```java
+static LogLine parseLine(String raw)
 
-    static double errorRate(List<LogLine> lines, long nowMillis, long windowMillis)
+static double errorRate(List<LogLine> lines, long nowMillis, long windowMillis)
 
-    static boolean isAlerting(List<LogLine> lines, long nowMillis, long windowMillis, double thresholdRatio)
+static boolean isAlerting(List<LogLine> lines, long nowMillis, long windowMillis, double thresholdRatio)
+```
 
 `parseLine` splits `raw` into timestamp, level, and message on `|` and returns a `LogLine`.
 Throw `IllegalArgumentException` if the line doesn't have all three parts.
@@ -21,9 +23,7 @@ up to and including `nowMillis`. Return `0.0` if no lines fall in that window at
 
 `isAlerting` is true when `errorRate(...)` is strictly greater than `thresholdRatio`.
 
-**Requirements**
+### Requirements
 
-- The denominator in `errorRate` is the count of lines *inside the window*, not every
-  line ever passed in -- an old burst of errors outside the window must not affect a
-  clean window's rate at all.
+- The denominator in `errorRate` is the count of lines *inside the window*, not every line ever passed in -- an old burst of errors outside the window must not affect a clean window's rate at all.
 - `lines` isn't guaranteed sorted by timestamp.

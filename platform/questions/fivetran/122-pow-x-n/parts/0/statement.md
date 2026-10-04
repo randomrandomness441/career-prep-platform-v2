@@ -1,21 +1,36 @@
-Standard LeetCode problem, tagged to Fivetran's interview loop -- solve it in Java, no different from solving it on leetcode.com.
+> Standard LeetCode problem, tagged to Fivetran's interview loop. Solve it in Java, no different from solving it on leetcode.com.
 
 Implement `pow(x, n)`, which calculates `x` raised to the power `n` (i.e., `x^n`). Do not call a library pow function. Answers within `10^-5` of the actual value are accepted.
 
-`public double myPow(double x, int n)`
+```java
+public double myPow(double x, int n)
+```
 
+### Example 1:
+
+```
 Input: x = 2.00000, n = 10
 Output: 1024.00000
+```
 
+### Example 2:
+
+```
 Input: x = 2.10000, n = 3
 Output: 9.26100
+```
 
+### Example 3:
+
+```
 Input: x = 2.00000, n = -2
 Output: 0.25000
+```
 
-Constraints:
-- -100.0 < x < 100.0
-- -2^31 <= n <= 2^31 - 1
-- n is an integer
-- Either x is nonzero or n > 0.
-- -10^4 <= x^n <= 10^4
+### Constraints:
+
+- `-100.0 < x < 100.0`
+- `-2^31 <= n <= 2^31 - 1`
+- `n` is an integer
+- Either `x` is nonzero or `n > 0`.
+- `-10^4 <= x^n <= 10^4`

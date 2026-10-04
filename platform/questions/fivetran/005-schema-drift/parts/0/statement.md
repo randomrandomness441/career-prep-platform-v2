@@ -5,19 +5,18 @@ the sync every time that happens.
 
 Implement two static methods on `Solution`:
 
-    static String widenType(String existingType, String incomingType)
+```java
+static String widenType(String existingType, String incomingType)
 
-    static Map<String, String> inferSchema(List<Map<String, Object>> records)
+static Map<String, String> inferSchema(List<Map<String, Object>> records)
+```
 
 `widenType` decides what a field's type becomes when a new value's type doesn't match what
 was inferred before. Use this widening policy:
 
-- Widening with `"null"` on either side keeps the other type (a null value never narrows or
-  changes what's already known).
-- `"integer"` widening with `"float"` becomes `"float"` (every integer is representable as
-  a float; the reverse isn't safe).
-- Any other mismatch (including `"boolean"` meeting anything but itself or null) becomes
-  `"string"` -- the one type that can hold any value, used as the universal fallback.
+- Widening with `"null"` on either side keeps the other type (a null value never narrows or changes what's already known).
+- `"integer"` widening with `"float"` becomes `"float"` (every integer is representable as a float; the reverse isn't safe).
+- Any other mismatch (including `"boolean"` meeting anything but itself or null) becomes `"string"` -- the one type that can hold any value, used as the universal fallback.
 - Matching types stay as they are.
 
 `inferSchema` walks `records` in order and, for every field on every record, folds its
@@ -25,8 +24,7 @@ value's type into the running schema with `widenType`. A field's type in the res
 `"integer"`, `"float"`, `"boolean"`, `"string"`, or `"null"` (only if every value seen for
 that field, across every record, was null).
 
-**Constraints**
+### Constraints
 
-- Not every record has every field. A record missing a field doesn't affect that field's
-  type at all -- it's simply not folded in for that record.
+- Not every record has every field. A record missing a field doesn't affect that field's type at all -- it's simply not folded in for that record.
 - Field order in the output doesn't matter, only the final field -> type mapping.
