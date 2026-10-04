@@ -12,6 +12,14 @@ function post(path, body) {
 function esc(s) { return (s || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 function scoreClass(s) { return s == null ? 'score-lo' : s >= 80 ? 'score-hi' : s >= 60 ? 'score-mid' : 'score-lo'; }
 function fmtDate(ts) { return ts ? new Date(ts * 1000).toLocaleDateString() : ''; }
+// folder_path comes back from the DB as the real on-disk path under
+// jobsearch/data/applications/ -- one place to strip that prefix down to
+// what the /applications/ URL route expects, instead of the same literal
+// string repeated at every call site (the kind of duplicated assumption
+// that broke silently the last time this path moved).
+function appDocUrl(folderPath, filename) {
+  return `/applications/${encodeURIComponent(folderPath.replace('data/applications/', ''))}/${filename}`;
+}
 
 const STATUS_FLOW = ['phone_screen', 'interview', 'offer', 'rejected', 'ghosted', 'withdrawn'];
 let currentPage = 1;
@@ -161,10 +169,10 @@ async function openJob(id) {
         <span class="badge badge-${a.status === 'generated' ? 'new' : 'generated'}">${esc(a.status)}</span>
       </div>
       <div class="doc-links">
-        <a class="doc-link" href="/applications/${encodeURIComponent(a.folder_path.replace('applications/',''))}/resume.pdf">Resume <span class="ext">PDF</span></a>
-        <a class="doc-link alt" href="/applications/${encodeURIComponent(a.folder_path.replace('applications/',''))}/resume.docx">.docx</a>
-        <a class="doc-link" href="/applications/${encodeURIComponent(a.folder_path.replace('applications/',''))}/cover_letter.pdf">Cover letter <span class="ext">PDF</span></a>
-        <a class="doc-link alt" href="/applications/${encodeURIComponent(a.folder_path.replace('applications/',''))}/cover_letter.docx">.docx</a>
+        <a class="doc-link" href="${appDocUrl(a.folder_path, 'resume.pdf')}">Resume <span class="ext">PDF</span></a>
+        <a class="doc-link alt" href="${appDocUrl(a.folder_path, 'resume.docx')}">.docx</a>
+        <a class="doc-link" href="${appDocUrl(a.folder_path, 'cover_letter.pdf')}">Cover letter <span class="ext">PDF</span></a>
+        <a class="doc-link alt" href="${appDocUrl(a.folder_path, 'cover_letter.docx')}">.docx</a>
       </div>
     </div>` : `
     <div class="app-entry-applied">
@@ -340,7 +348,6 @@ async function loadApplications() {
     // Quick-marked ("applied elsewhere, never generated through this tool")
     // rows have an empty folder_path and {} ats_estimate -- no docs to link,
     // no ATS score to show, so that whole block is skipped for those.
-    const folderRel = a.folder_path ? a.folder_path.replace('applications/', '') : '';
     div.innerHTML = `
       <div class="app-head">
         <div>
@@ -351,11 +358,11 @@ async function loadApplications() {
       </div>
       ${a.folder_path ? `
       <div class="doc-links" style="margin-top:8px">
-        <a class="doc-link" href="/applications/${encodeURIComponent(folderRel)}/resume.pdf">Resume <span class="ext">PDF</span></a>
-        <a class="doc-link alt" href="/applications/${encodeURIComponent(folderRel)}/resume.docx">.docx</a>
-        <a class="doc-link" href="/applications/${encodeURIComponent(folderRel)}/cover_letter.pdf">Cover letter <span class="ext">PDF</span></a>
-        <a class="doc-link alt" href="/applications/${encodeURIComponent(folderRel)}/cover_letter.docx">.docx</a>
-        <a class="doc-link alt" href="/applications/${encodeURIComponent(folderRel)}/job_description.md">Job description</a>
+        <a class="doc-link" href="${appDocUrl(a.folder_path, 'resume.pdf')}">Resume <span class="ext">PDF</span></a>
+        <a class="doc-link alt" href="${appDocUrl(a.folder_path, 'resume.docx')}">.docx</a>
+        <a class="doc-link" href="${appDocUrl(a.folder_path, 'cover_letter.pdf')}">Cover letter <span class="ext">PDF</span></a>
+        <a class="doc-link alt" href="${appDocUrl(a.folder_path, 'cover_letter.docx')}">.docx</a>
+        <a class="doc-link alt" href="${appDocUrl(a.folder_path, 'job_description.md')}">Job description</a>
       </div>` : ''}
       ${a.status === 'generated' ? `
       <div class="referral-form">

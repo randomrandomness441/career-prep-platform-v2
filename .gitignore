@@ -1,13 +1,10 @@
 __pycache__/
 *.pyc
 .venv/
-*.db
-*.sqlite3
 .DS_Store
-applications/
 
-# One-time personal seed script -- has a real name/phone/email hardcoded in
-# it (it seeded ONE person's point bank from their own old resume PDFs).
-# Not reusable platform code; anyone else uses the "Upload a resume" /
-# "Add point manually" UI instead, which is fully generic.
-jobsearch/seed_point_bank.py
+# Every personal/generated thing -- databases, generated resumes and cover
+# letters, one-time personal seed scripts -- lives under each project's own
+# data/ folder and nowhere else. One rule instead of a growing list that's
+# easy to miss an entry on (see sync.sh).
+data/

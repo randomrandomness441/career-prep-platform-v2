@@ -22,7 +22,7 @@ import statistics
 PREFILTER = 50
 STRONG = 70
 
-PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "validate_results.jsonl")
+PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "validate_results.jsonl")
 
 
 def corr(xs, ys):

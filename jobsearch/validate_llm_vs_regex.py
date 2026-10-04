@@ -37,7 +37,7 @@ ZAI_MODEL = os.environ.get("ZAI_MODEL", "glm-4.6")
 # pay-as-you-go wallet and 429s "Insufficient balance" even with a valid,
 # funded coding-plan key. Confirmed by hitting that exact error.
 ZAI_URL = "https://api.z.ai/api/coding/paas/v4/chat/completions"
-OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "validate_results.jsonl")
+OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "validate_results.jsonl")
 
 JD_CHAR_LIMIT = 12000   # covers all but the single longest of 963 postings in full
 

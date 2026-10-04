@@ -35,7 +35,9 @@ _ats_spec = _importlib_util.spec_from_file_location(
 ats = _importlib_util.module_from_spec(_ats_spec)
 _ats_spec.loader.exec_module(ats)
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jobsearch.db")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+DB_PATH = os.path.join(DATA_DIR, "jobsearch.db")
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS point_bank (

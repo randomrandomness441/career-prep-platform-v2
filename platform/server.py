@@ -57,7 +57,7 @@ PORT = int(os.environ.get("PORT", "8777"))
 _flat_jobsearch = os.path.join(REPO, "jobsearch")
 JOBSEARCH_DIR = _flat_jobsearch if os.path.isdir(_flat_jobsearch) else os.path.join(os.path.dirname(REPO), "jobsearch")
 JOBSEARCH_STATIC = os.path.join(JOBSEARCH_DIR, "static")
-JOBSEARCH_APPLICATIONS = os.path.join(JOBSEARCH_DIR, "applications")
+JOBSEARCH_APPLICATIONS = os.path.join(JOBSEARCH_DIR, "data", "applications")
 JOBSEARCH_VENV_PY = os.path.join(JOBSEARCH_DIR, ".venv", "bin", "python3")
 
 

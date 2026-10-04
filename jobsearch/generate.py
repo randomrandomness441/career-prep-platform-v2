@@ -197,7 +197,7 @@ def _drop_row(roles, row_id):
     return out
 
 
-def generate(job_id, summary, cover_letter_body, out_root="applications"):
+def generate(job_id, summary, cover_letter_body, out_root="data/applications"):
     violations = humanizer.check_human_style(summary) + humanizer.check_human_style(cover_letter_body)
     if violations:
         raise ValueError("Humanizer check failed, nothing generated:\n- " + "\n- ".join(violations))
