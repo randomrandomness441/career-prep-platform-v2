@@ -1,22 +1,25 @@
-# Career Prep Platform
+# Curie
 
 Two tools in one small app. It runs on your own computer, nothing fancy,
 nothing in the cloud.
 
 ## What's actually in here
 
-**1. A coding-interview tutor** (`platform/`)
+**1. Deep teaching on the stuff most courses skip** (`platform/`)
 
-You get real practice problems about writing code that does many things at
-once. Programmers call this "concurrency." Think of a kitchen with three
-cooks instead of one. Things get done faster, but now you have to make sure
-two cooks don't grab the same pan at the same time. That's the kind of bug
-this teaches you to spot and fix.
+This isn't just interview questions. It teaches real concepts, the kind
+that usually only come from years on the job, not a course. Right now that
+means concurrency: writing code that does many things at once. Think of a
+kitchen with three cooks instead of one. Things get done faster, but now
+you have to make sure two cooks don't grab the same pan at the same time.
+That's the kind of bug this teaches you to actually understand, not just
+memorize.
 
-You write your answer, and the app checks it for you. It compiles your
-code, runs it fifty times on purpose to catch bugs that only show up
-sometimes, and tells you plainly whether you passed. There's also a mock
-interviewer built in, and you can actually talk to it like a real person.
+You get real practice problems, and the app checks your answer for you. It
+compiles your code, runs it fifty times on purpose to catch bugs that only
+show up sometimes, and tells you plainly whether you passed. There is a
+mock interviewer built in too, in case you want to practice explaining
+what you just learned out loud.
 
 **2. A job-hunting assistant** (`jobsearch/`)
 
